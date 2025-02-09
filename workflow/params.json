@@ -1,0 +1,13 @@
+{
+    "VDW_INT_ENE":  -0.07775,
+    "DCP":          -0.0003112,
+    "T_REF":        385,
+    "MIN_TEMP":     300,
+    "MAX_TEMP":     350,
+    "TEMP_STEP":    5,
+    "R":            0.008314,
+    "IS":           0.043,
+    "DIELEC_CYTO":  29,
+    "DIELEC_TM":    4,
+    "N_PLANES":     19
+}
