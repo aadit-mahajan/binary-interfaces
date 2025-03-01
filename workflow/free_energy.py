@@ -3,6 +3,11 @@ import numpy as np
 import math
 import os
 import json
+import logging
+import concurrent.futures
+
+logger = logging.getLogger(__name__)
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', filename='debug.log')
 
 pdb_file_dir = './pdb_files'
 elec_intr_dir = './elec_intr_files'
@@ -43,6 +48,8 @@ def generate_z_planes(interchain_intr, N_PLANES) -> list[float]:
         z_values.append(interchain_intr.atom2_zcoord.iloc[i])
 
     z_values = np.array(z_values)
+    if z_values.size == 0:
+        return []
     z_planes = list(np.linspace(z_values.min(), z_values.max(), N_PLANES))
     z_planes.sort()
     return z_planes
@@ -178,6 +185,8 @@ def get_sw_values(master_matrix, elec_intr, vdw_intr, temp) -> pd.DataFrame:
     
     return master_matrix
 
+
+
 def save_master_matrix(master_matrix, id, output_dir):
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
@@ -200,7 +209,7 @@ if __name__ == '__main__':
     max_temp = params['MAX_TEMP']
     temp_step = params['TEMP_STEP']
     R = params['R']
-    DIELEC = params['DIELEC_CYTO']          # change this to DIELEC_TM if working with transmembrane proteins. 
+    DIELEC = params['DIELEC_TM']          # change this to DIELEC_CYTO if working with cytosolic proteins. 
     N_PLANES = params['N_PLANES']
 
     elec_intr_files = get_elec_intr_filepaths(elec_intr_dir) 
@@ -216,42 +225,49 @@ if __name__ == '__main__':
         'Found pdb files...\n', '\n'.join(pdb_files), '\n-------------\n'
     )
 
-    for id in id_list:
-        print(f'Processing {id}...')
-        
-        elec_intr = pd.read_csv(f'{elec_intr_dir}/elec_intr_{id}.csv')
-        vdw_intr = pd.read_csv(f'{vdw_intr_dir}/vdw_intr_{id}.csv')
+    def process_pdb_files(id):
+        try:
+            logging.info(f'Processing {id}...')
+            elec_intr = pd.read_csv(f'{elec_intr_dir}/elec_intr_{id}.csv')
+            vdw_intr = pd.read_csv(f'{vdw_intr_dir}/vdw_intr_{id}.csv')
 
-        g_vecs = pd.DataFrame()
+            g_vecs = pd.DataFrame()
 
-        # 1. generate z_planes
-        z_planes = generate_z_planes(elec_intr, N_PLANES)
+            # 1. generate z_planes
+            z_planes = generate_z_planes(elec_intr, N_PLANES)
 
-        # 2. generate master_matrix
-        master_matrix = generate_master_mat(z_planes)
+            # 2. generate master_matrix
+            master_matrix = generate_master_mat(z_planes)
 
-        # 3. get sections for vdw_intr
-        vdw_intr = get_vdw_intr_sections(vdw_intr, z_planes)
+            # 3. get sections for vdw_intr
+            vdw_intr = get_vdw_intr_sections(vdw_intr, z_planes)
 
-        # 4. get sections for elec_intr
-        elec_intr = get_interchain_intr_sections(elec_intr, z_planes)
+            # 4. get sections for elec_intr
+            elec_intr = get_interchain_intr_sections(elec_intr, z_planes)
 
-        # 5. calculate elec_intr_energy
-        elec_intr = calc_elec_intr_energy(elec_intr, DIELEC)
+            # 5. calculate elec_intr_energy
+            elec_intr = calc_elec_intr_energy(elec_intr, DIELEC)
 
-        # 6. get sw_values
-        for temp in range(min_temp, max_temp + temp_step, temp_step):
-            fin_master_matrix = get_sw_values(master_matrix, elec_intr, vdw_intr, temp)
-            z_part_total = list(fin_master_matrix.groupby('struct_elem').sw_part.sum())
-            z_total = sum(z_part_total)
-            p_vec = [i/z_total for i in z_part_total]
-            g_vec = [-R*temp*math.log(i) for i in p_vec]
-            g_vecs[temp] = g_vec
+            # 6. get sw_values
+            for temp in range(min_temp, max_temp + temp_step, temp_step):
+                fin_master_matrix = get_sw_values(master_matrix, elec_intr, vdw_intr, temp)
+                z_part_total = list(fin_master_matrix.groupby('struct_elem').sw_part.sum())
+                z_total = sum(z_part_total)
+                p_vec = [i/z_total for i in z_part_total]
+                g_vec = [-R*temp*math.log(i) for i in p_vec]
+                g_vecs[temp] = g_vec
 
-        # 7. save master_matrix
-        save_master_matrix(fin_master_matrix, id, master_matrices_dir)
+            
+            # 7. save master_matrix
+            save_master_matrix(fin_master_matrix, id, master_matrices_dir)
 
-        # 8. save g_vecs
-        save_g_vecs(g_vecs, id, g_vecs_dir)
+            # 8. save g_vecs
+            save_g_vecs(g_vecs, id, g_vecs_dir)
+            logging.info(f'Finished processing {id}...')
+        except Exception as e:
+            logging.error(f'Error processing {id}: {e}', exc_info=True)
+
+    with concurrent.futures.ThreadPoolExecutor() as executor:
+        executor.map(process_pdb_files, id_list)
 
     print('Done!')

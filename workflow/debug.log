@@ -1,0 +1,1297 @@
+01-Mar-25 12:15:42 - Checking if all pdbs have been fetched...
+01-Mar-25 12:15:42 - Fetching pdbs...
+01-Mar-25 12:16:37 - Checking if all pdbs have been fetched...
+01-Mar-25 12:16:37 - Fetching pdbs...
+01-Mar-25 12:21:20 - Checking if all pdbs have been fetched...
+01-Mar-25 12:21:20 - Fetching pdbs...
+01-Mar-25 12:21:22 - Processing pdb: 7WMV.pdb
+01-Mar-25 12:21:22 - Getting electrostatic interactions for pdb file: ./pdb_files/7WMV.pdb
+01-Mar-25 12:21:22 - Processing pdb: 9DW5.pdb
+01-Mar-25 12:21:22 - Processing pdb: 7VSG.pdb
+01-Mar-25 12:21:22 - Processing pdb: 6NQ0.pdb
+01-Mar-25 12:21:22 - Getting electrostatic interactions for pdb file: ./pdb_files/9DW5.pdb
+01-Mar-25 12:21:22 - Getting electrostatic interactions for pdb file: ./pdb_files/7VSG.pdb
+01-Mar-25 12:21:22 - Getting electrostatic interactions for pdb file: ./pdb_files/6NQ0.pdb
+01-Mar-25 12:21:22 - Processing pdb: 6RV3.pdb
+01-Mar-25 12:21:22 - Processing pdb: 7RRA.pdb
+01-Mar-25 12:21:22 - Processing pdb: 2L34.pdb
+01-Mar-25 12:21:22 - Processing pdb: 7YQ6.pdb
+01-Mar-25 12:21:22 - Getting electrostatic interactions for pdb file: ./pdb_files/6RV3.pdb
+01-Mar-25 12:21:22 - Processing pdb: 6WCB.pdb
+01-Mar-25 12:21:22 - Processing pdb: 6W5V.pdb
+01-Mar-25 12:21:22 - Getting electrostatic interactions for pdb file: ./pdb_files/7RRA.pdb
+01-Mar-25 12:21:22 - Processing pdb: 8TGK.pdb
+01-Mar-25 12:21:22 - Getting electrostatic interactions for pdb file: ./pdb_files/2L34.pdb
+01-Mar-25 12:21:22 - Processing pdb: 1OJA.pdb
+01-Mar-25 12:21:22 - Getting electrostatic interactions for pdb file: ./pdb_files/7YQ6.pdb
+01-Mar-25 12:21:22 - Getting electrostatic interactions for pdb file: ./pdb_files/6WCB.pdb
+01-Mar-25 12:21:22 - Getting electrostatic interactions for pdb file: ./pdb_files/6W5V.pdb
+01-Mar-25 12:21:23 - Getting electrostatic interactions for pdb file: ./pdb_files/8TGK.pdb
+01-Mar-25 12:21:23 - Getting electrostatic interactions for pdb file: ./pdb_files/1OJA.pdb
+01-Mar-25 12:21:23 - Getting Van der Waals interactions for pdb file: ./pdb_files/7WMV.pdb
+01-Mar-25 12:21:23 - Getting Van der Waals interactions for pdb file: ./pdb_files/6NQ0.pdb
+01-Mar-25 12:21:23 - Getting Van der Waals interactions for pdb file: ./pdb_files/9DW5.pdb
+01-Mar-25 12:21:24 - Getting Van der Waals interactions for pdb file: ./pdb_files/7VSG.pdb
+01-Mar-25 12:21:24 - Getting Van der Waals interactions for pdb file: ./pdb_files/8TGK.pdb
+01-Mar-25 12:21:24 - Getting Van der Waals interactions for pdb file: ./pdb_files/6WCB.pdb
+01-Mar-25 12:21:24 - Getting Van der Waals interactions for pdb file: ./pdb_files/7YQ6.pdb
+01-Mar-25 12:21:24 - Getting Van der Waals interactions for pdb file: ./pdb_files/1OJA.pdb
+01-Mar-25 12:21:24 - Getting Van der Waals interactions for pdb file: ./pdb_files/7RRA.pdb
+01-Mar-25 12:21:24 - Getting Van der Waals interactions for pdb file: ./pdb_files/6RV3.pdb
+01-Mar-25 12:21:24 - Getting Van der Waals interactions for pdb file: ./pdb_files/2L34.pdb
+01-Mar-25 12:21:25 - Done processing pdb: 9DW5.pdb
+01-Mar-25 12:21:25 - Processing pdb: 7CA3.pdb
+01-Mar-25 12:21:25 - Getting electrostatic interactions for pdb file: ./pdb_files/7CA3.pdb
+01-Mar-25 12:21:25 - Getting Van der Waals interactions for pdb file: ./pdb_files/6W5V.pdb
+01-Mar-25 12:21:25 - Done processing pdb: 7WMV.pdb
+01-Mar-25 12:21:25 - Processing pdb: 5YQZ.pdb
+01-Mar-25 12:21:25 - Getting electrostatic interactions for pdb file: ./pdb_files/5YQZ.pdb
+01-Mar-25 12:21:26 - Done processing pdb: 7YQ6.pdb
+01-Mar-25 12:21:26 - Processing pdb: 7P5C.pdb
+01-Mar-25 12:21:26 - Getting electrostatic interactions for pdb file: ./pdb_files/7P5C.pdb
+01-Mar-25 12:21:26 - Done processing pdb: 8TGK.pdb
+01-Mar-25 12:21:26 - Processing pdb: 8W6T.pdb
+01-Mar-25 12:21:26 - Getting electrostatic interactions for pdb file: ./pdb_files/8W6T.pdb
+01-Mar-25 12:21:26 - Done processing pdb: 2L34.pdb
+01-Mar-25 12:21:26 - Getting Van der Waals interactions for pdb file: ./pdb_files/5YQZ.pdb
+01-Mar-25 12:21:26 - Processing pdb: 4JKV.pdb
+01-Mar-25 12:21:26 - Getting electrostatic interactions for pdb file: ./pdb_files/4JKV.pdb
+01-Mar-25 12:21:26 - Getting Van der Waals interactions for pdb file: ./pdb_files/7CA3.pdb
+01-Mar-25 12:21:26 - Done processing pdb: 6W5V.pdb
+01-Mar-25 12:21:26 - Processing pdb: 7DTV.pdb
+01-Mar-25 12:21:26 - Getting electrostatic interactions for pdb file: ./pdb_files/7DTV.pdb
+01-Mar-25 12:21:26 - Done processing pdb: 6WCB.pdb
+01-Mar-25 12:21:26 - Processing pdb: 8GTJ.pdb
+01-Mar-25 12:21:26 - Getting electrostatic interactions for pdb file: ./pdb_files/8GTJ.pdb
+01-Mar-25 12:21:27 - Getting Van der Waals interactions for pdb file: ./pdb_files/7P5C.pdb
+01-Mar-25 12:21:27 - Getting Van der Waals interactions for pdb file: ./pdb_files/8W6T.pdb
+01-Mar-25 12:21:27 - Done processing pdb: 7VSG.pdb
+01-Mar-25 12:21:27 - Processing pdb: 8GTK.pdb
+01-Mar-25 12:21:27 - Done processing pdb: 6NQ0.pdb
+01-Mar-25 12:21:27 - Getting electrostatic interactions for pdb file: ./pdb_files/8GTK.pdb
+01-Mar-25 12:21:27 - Done processing pdb: 5YQZ.pdb
+01-Mar-25 12:21:27 - Getting Van der Waals interactions for pdb file: ./pdb_files/4JKV.pdb
+01-Mar-25 12:21:27 - Done processing pdb: 1OJA.pdb
+01-Mar-25 12:21:28 - Getting Van der Waals interactions for pdb file: ./pdb_files/7DTV.pdb
+01-Mar-25 12:21:28 - Done processing pdb: 7RRA.pdb
+01-Mar-25 12:21:28 - Getting Van der Waals interactions for pdb file: ./pdb_files/8GTJ.pdb
+01-Mar-25 12:21:28 - Getting Van der Waals interactions for pdb file: ./pdb_files/8GTK.pdb
+01-Mar-25 12:21:28 - Done processing pdb: 6RV3.pdb
+01-Mar-25 12:21:28 - Done processing pdb: 7P5C.pdb
+01-Mar-25 12:21:28 - Done processing pdb: 7CA3.pdb
+01-Mar-25 12:21:28 - Done processing pdb: 8W6T.pdb
+01-Mar-25 12:21:28 - Done processing pdb: 8GTJ.pdb
+01-Mar-25 12:21:28 - Done processing pdb: 8GTK.pdb
+01-Mar-25 12:21:28 - Done processing pdb: 4JKV.pdb
+01-Mar-25 12:21:28 - Done processing pdb: 7DTV.pdb
+01-Mar-25 12:25:11 - Checking if all pdbs have been fetched...
+01-Mar-25 12:25:11 - Fetching pdbs...
+01-Mar-25 12:25:12 - Processing pdb: 7WMV.pdb
+01-Mar-25 12:25:12 - Processing pdb: 9DW5.pdb
+01-Mar-25 12:25:12 - Getting electrostatic interactions for pdb file: ./pdb_files/7WMV.pdb
+01-Mar-25 12:25:12 - Processing pdb: 7VSG.pdb
+01-Mar-25 12:25:12 - Getting electrostatic interactions for pdb file: ./pdb_files/9DW5.pdb
+01-Mar-25 12:25:12 - Processing pdb: 6NQ0.pdb
+01-Mar-25 12:25:12 - Processing pdb: 6RV3.pdb
+01-Mar-25 12:25:12 - Processing pdb: 7RRA.pdb
+01-Mar-25 12:25:12 - Getting electrostatic interactions for pdb file: ./pdb_files/7VSG.pdb
+01-Mar-25 12:25:12 - Processing pdb: 2L34.pdb
+01-Mar-25 12:25:12 - Getting electrostatic interactions for pdb file: ./pdb_files/6NQ0.pdb
+01-Mar-25 12:25:12 - Processing pdb: 7YQ6.pdb
+01-Mar-25 12:25:12 - Getting electrostatic interactions for pdb file: ./pdb_files/6RV3.pdb
+01-Mar-25 12:25:12 - Processing pdb: 6WCB.pdb
+01-Mar-25 12:25:12 - Getting electrostatic interactions for pdb file: ./pdb_files/7RRA.pdb
+01-Mar-25 12:25:12 - Processing pdb: 6W5V.pdb
+01-Mar-25 12:25:12 - Processing pdb: 8TGK.pdb
+01-Mar-25 12:25:12 - Processing pdb: 1OJA.pdb
+01-Mar-25 12:25:12 - Getting electrostatic interactions for pdb file: ./pdb_files/2L34.pdb
+01-Mar-25 12:25:12 - Getting electrostatic interactions for pdb file: ./pdb_files/7YQ6.pdb
+01-Mar-25 12:25:12 - Getting electrostatic interactions for pdb file: ./pdb_files/6WCB.pdb
+01-Mar-25 12:25:12 - Getting electrostatic interactions for pdb file: ./pdb_files/6W5V.pdb
+01-Mar-25 12:25:12 - Getting electrostatic interactions for pdb file: ./pdb_files/8TGK.pdb
+01-Mar-25 12:25:12 - Getting electrostatic interactions for pdb file: ./pdb_files/1OJA.pdb
+01-Mar-25 12:25:13 - Getting Van der Waals interactions for pdb file: ./pdb_files/7WMV.pdb
+01-Mar-25 12:25:13 - Getting Van der Waals interactions for pdb file: ./pdb_files/9DW5.pdb
+01-Mar-25 12:25:13 - Getting Van der Waals interactions for pdb file: ./pdb_files/8TGK.pdb
+01-Mar-25 12:25:13 - Getting Van der Waals interactions for pdb file: ./pdb_files/7VSG.pdb
+01-Mar-25 12:25:13 - Getting Van der Waals interactions for pdb file: ./pdb_files/6NQ0.pdb
+01-Mar-25 12:25:13 - Getting Van der Waals interactions for pdb file: ./pdb_files/6WCB.pdb
+01-Mar-25 12:25:14 - Getting Van der Waals interactions for pdb file: ./pdb_files/6RV3.pdb
+01-Mar-25 12:25:14 - Getting Van der Waals interactions for pdb file: ./pdb_files/1OJA.pdb
+01-Mar-25 12:25:14 - Getting Van der Waals interactions for pdb file: ./pdb_files/7YQ6.pdb
+01-Mar-25 12:25:14 - Getting Van der Waals interactions for pdb file: ./pdb_files/2L34.pdb
+01-Mar-25 12:25:14 - Getting Van der Waals interactions for pdb file: ./pdb_files/7RRA.pdb
+01-Mar-25 12:25:15 - Getting Van der Waals interactions for pdb file: ./pdb_files/6W5V.pdb
+01-Mar-25 12:25:15 - Done processing pdb: 7WMV.pdb
+01-Mar-25 12:25:15 - Processing pdb: 7CA3.pdb
+01-Mar-25 12:25:15 - Getting electrostatic interactions for pdb file: ./pdb_files/7CA3.pdb
+01-Mar-25 12:25:15 - Done processing pdb: 8TGK.pdb
+01-Mar-25 12:25:15 - Processing pdb: 5YQZ.pdb
+01-Mar-25 12:25:15 - Getting electrostatic interactions for pdb file: ./pdb_files/5YQZ.pdb
+01-Mar-25 12:25:15 - Done processing pdb: 9DW5.pdb
+01-Mar-25 12:25:15 - Processing pdb: 7P5C.pdb
+01-Mar-25 12:25:15 - Getting electrostatic interactions for pdb file: ./pdb_files/7P5C.pdb
+01-Mar-25 12:25:15 - Getting Van der Waals interactions for pdb file: ./pdb_files/5YQZ.pdb
+01-Mar-25 12:25:15 - Done processing pdb: 7YQ6.pdb
+01-Mar-25 12:25:16 - Processing pdb: 8W6T.pdb
+01-Mar-25 12:25:16 - Getting electrostatic interactions for pdb file: ./pdb_files/8W6T.pdb
+01-Mar-25 12:25:16 - Getting Van der Waals interactions for pdb file: ./pdb_files/7P5C.pdb
+01-Mar-25 12:25:16 - Getting Van der Waals interactions for pdb file: ./pdb_files/7CA3.pdb
+01-Mar-25 12:25:16 - Done processing pdb: 6WCB.pdb
+01-Mar-25 12:25:16 - Processing pdb: 4JKV.pdb
+01-Mar-25 12:25:16 - Getting electrostatic interactions for pdb file: ./pdb_files/4JKV.pdb
+01-Mar-25 12:25:16 - Done processing pdb: 2L34.pdb
+01-Mar-25 12:25:16 - Processing pdb: 7DTV.pdb
+01-Mar-25 12:25:16 - Done processing pdb: 6W5V.pdb
+01-Mar-25 12:25:16 - Processing pdb: 8GTJ.pdb
+01-Mar-25 12:25:16 - Getting electrostatic interactions for pdb file: ./pdb_files/7DTV.pdb
+01-Mar-25 12:25:16 - Getting electrostatic interactions for pdb file: ./pdb_files/8GTJ.pdb
+01-Mar-25 12:25:17 - Done processing pdb: 5YQZ.pdb
+01-Mar-25 12:25:17 - Processing pdb: 8GTK.pdb
+01-Mar-25 12:25:17 - Getting electrostatic interactions for pdb file: ./pdb_files/8GTK.pdb
+01-Mar-25 12:25:17 - Getting Van der Waals interactions for pdb file: ./pdb_files/8W6T.pdb
+01-Mar-25 12:25:17 - Done processing pdb: 6RV3.pdb
+01-Mar-25 12:25:17 - Done processing pdb: 7VSG.pdb
+01-Mar-25 12:25:17 - Done processing pdb: 6NQ0.pdb
+01-Mar-25 12:25:17 - Getting Van der Waals interactions for pdb file: ./pdb_files/8GTK.pdb
+01-Mar-25 12:25:17 - Done processing pdb: 1OJA.pdb
+01-Mar-25 12:25:17 - Getting Van der Waals interactions for pdb file: ./pdb_files/8GTJ.pdb
+01-Mar-25 12:25:17 - Done processing pdb: 7RRA.pdb
+01-Mar-25 12:25:18 - Done processing pdb: 7P5C.pdb
+01-Mar-25 12:25:18 - Getting Van der Waals interactions for pdb file: ./pdb_files/7DTV.pdb
+01-Mar-25 12:25:18 - Getting Van der Waals interactions for pdb file: ./pdb_files/4JKV.pdb
+01-Mar-25 12:25:18 - Done processing pdb: 7CA3.pdb
+01-Mar-25 12:25:18 - Done processing pdb: 8GTK.pdb
+01-Mar-25 12:25:18 - Done processing pdb: 8W6T.pdb
+01-Mar-25 12:25:18 - Done processing pdb: 8GTJ.pdb
+01-Mar-25 12:25:18 - Done processing pdb: 4JKV.pdb
+01-Mar-25 12:25:18 - Done processing pdb: 7DTV.pdb
+01-Mar-25 12:26:22 - Checking if all pdbs have been fetched...
+01-Mar-25 12:26:22 - Fetching pdbs...
+01-Mar-25 12:26:22 - Processing pdb: 7WMV.pdb
+01-Mar-25 12:26:22 - Getting electrostatic interactions for pdb file: ./pdb_files/7WMV.pdb
+01-Mar-25 12:26:22 - Processing pdb: 9DW5.pdb
+01-Mar-25 12:26:22 - Getting electrostatic interactions for pdb file: ./pdb_files/9DW5.pdb
+01-Mar-25 12:26:22 - Processing pdb: 7VSG.pdb
+01-Mar-25 12:26:22 - Getting electrostatic interactions for pdb file: ./pdb_files/7VSG.pdb
+01-Mar-25 12:26:22 - Processing pdb: 6NQ0.pdb
+01-Mar-25 12:26:22 - Getting electrostatic interactions for pdb file: ./pdb_files/6NQ0.pdb
+01-Mar-25 12:26:22 - Processing pdb: 6RV3.pdb
+01-Mar-25 12:26:22 - Processing pdb: 7RRA.pdb
+01-Mar-25 12:26:22 - Getting electrostatic interactions for pdb file: ./pdb_files/6RV3.pdb
+01-Mar-25 12:26:22 - Getting electrostatic interactions for pdb file: ./pdb_files/7RRA.pdb
+01-Mar-25 12:26:22 - Processing pdb: 2L34.pdb
+01-Mar-25 12:26:22 - Processing pdb: 7YQ6.pdb
+01-Mar-25 12:26:22 - Processing pdb: 6WCB.pdb
+01-Mar-25 12:26:22 - Processing pdb: 6W5V.pdb
+01-Mar-25 12:26:23 - Processing pdb: 8TGK.pdb
+01-Mar-25 12:26:23 - Processing pdb: 1OJA.pdb
+01-Mar-25 12:26:23 - Getting electrostatic interactions for pdb file: ./pdb_files/2L34.pdb
+01-Mar-25 12:26:23 - Getting electrostatic interactions for pdb file: ./pdb_files/7YQ6.pdb
+01-Mar-25 12:26:23 - Getting electrostatic interactions for pdb file: ./pdb_files/6WCB.pdb
+01-Mar-25 12:26:23 - Getting electrostatic interactions for pdb file: ./pdb_files/8TGK.pdb
+01-Mar-25 12:26:23 - Getting electrostatic interactions for pdb file: ./pdb_files/1OJA.pdb
+01-Mar-25 12:26:23 - Getting electrostatic interactions for pdb file: ./pdb_files/6W5V.pdb
+01-Mar-25 12:26:23 - Electrostatic interactions done.
+01-Mar-25 12:26:23 - Getting Van der Waals interactions for pdb file: ./pdb_files/9DW5.pdb
+01-Mar-25 12:26:24 - Electrostatic interactions done.
+01-Mar-25 12:26:24 - Getting Van der Waals interactions for pdb file: ./pdb_files/7WMV.pdb
+01-Mar-25 12:26:24 - Electrostatic interactions done.
+01-Mar-25 12:26:24 - Getting Van der Waals interactions for pdb file: ./pdb_files/8TGK.pdb
+01-Mar-25 12:26:24 - Electrostatic interactions done.
+01-Mar-25 12:26:24 - Getting Van der Waals interactions for pdb file: ./pdb_files/1OJA.pdb
+01-Mar-25 12:26:24 - Electrostatic interactions done.
+01-Mar-25 12:26:24 - Getting Van der Waals interactions for pdb file: ./pdb_files/7VSG.pdb
+01-Mar-25 12:26:24 - Electrostatic interactions done.
+01-Mar-25 12:26:24 - Getting Van der Waals interactions for pdb file: ./pdb_files/6WCB.pdb
+01-Mar-25 12:26:24 - Electrostatic interactions done.
+01-Mar-25 12:26:24 - Getting Van der Waals interactions for pdb file: ./pdb_files/6NQ0.pdb
+01-Mar-25 12:26:24 - Electrostatic interactions done.
+01-Mar-25 12:26:24 - Getting Van der Waals interactions for pdb file: ./pdb_files/7YQ6.pdb
+01-Mar-25 12:26:25 - Electrostatic interactions done.
+01-Mar-25 12:26:25 - Getting Van der Waals interactions for pdb file: ./pdb_files/2L34.pdb
+01-Mar-25 12:26:25 - Electrostatic interactions done.
+01-Mar-25 12:26:25 - Getting Van der Waals interactions for pdb file: ./pdb_files/7RRA.pdb
+01-Mar-25 12:26:25 - Electrostatic interactions done.
+01-Mar-25 12:26:25 - Getting Van der Waals interactions for pdb file: ./pdb_files/6RV3.pdb
+01-Mar-25 12:26:25 - Electrostatic interactions done.
+01-Mar-25 12:26:25 - Getting Van der Waals interactions for pdb file: ./pdb_files/6W5V.pdb
+01-Mar-25 12:26:25 - Van der Waals interactions done.
+01-Mar-25 12:26:25 - Done processing pdb: 9DW5.pdb
+01-Mar-25 12:26:25 - Processing pdb: 7CA3.pdb
+01-Mar-25 12:26:25 - Getting electrostatic interactions for pdb file: ./pdb_files/7CA3.pdb
+01-Mar-25 12:26:25 - Van der Waals interactions done.
+01-Mar-25 12:26:25 - Done processing pdb: 7WMV.pdb
+01-Mar-25 12:26:25 - Processing pdb: 5YQZ.pdb
+01-Mar-25 12:26:25 - Getting electrostatic interactions for pdb file: ./pdb_files/5YQZ.pdb
+01-Mar-25 12:26:26 - Van der Waals interactions done.
+01-Mar-25 12:26:26 - Done processing pdb: 7YQ6.pdb
+01-Mar-25 12:26:26 - Processing pdb: 7P5C.pdb
+01-Mar-25 12:26:26 - Getting electrostatic interactions for pdb file: ./pdb_files/7P5C.pdb
+01-Mar-25 12:26:26 - Van der Waals interactions done.
+01-Mar-25 12:26:26 - Done processing pdb: 8TGK.pdb
+01-Mar-25 12:26:26 - Processing pdb: 8W6T.pdb
+01-Mar-25 12:26:26 - Getting electrostatic interactions for pdb file: ./pdb_files/8W6T.pdb
+01-Mar-25 12:26:26 - Van der Waals interactions done.
+01-Mar-25 12:26:26 - Done processing pdb: 2L34.pdb
+01-Mar-25 12:26:26 - Processing pdb: 4JKV.pdb
+01-Mar-25 12:26:26 - Getting electrostatic interactions for pdb file: ./pdb_files/4JKV.pdb
+01-Mar-25 12:26:26 - Van der Waals interactions done.
+01-Mar-25 12:26:26 - Done processing pdb: 6WCB.pdb
+01-Mar-25 12:26:26 - Processing pdb: 7DTV.pdb
+01-Mar-25 12:26:26 - Getting electrostatic interactions for pdb file: ./pdb_files/7DTV.pdb
+01-Mar-25 12:26:26 - Electrostatic interactions done.
+01-Mar-25 12:26:26 - Getting Van der Waals interactions for pdb file: ./pdb_files/5YQZ.pdb
+01-Mar-25 12:26:27 - Electrostatic interactions done.
+01-Mar-25 12:26:27 - Getting Van der Waals interactions for pdb file: ./pdb_files/7CA3.pdb
+01-Mar-25 12:26:27 - Van der Waals interactions done.
+01-Mar-25 12:26:27 - Done processing pdb: 6W5V.pdb
+01-Mar-25 12:26:27 - Processing pdb: 8GTJ.pdb
+01-Mar-25 12:26:27 - Getting electrostatic interactions for pdb file: ./pdb_files/8GTJ.pdb
+01-Mar-25 12:26:27 - Electrostatic interactions done.
+01-Mar-25 12:26:27 - Getting Van der Waals interactions for pdb file: ./pdb_files/8W6T.pdb
+01-Mar-25 12:26:27 - Van der Waals interactions done.
+01-Mar-25 12:26:27 - Done processing pdb: 7VSG.pdb
+01-Mar-25 12:26:27 - Processing pdb: 8GTK.pdb
+01-Mar-25 12:26:27 - Getting electrostatic interactions for pdb file: ./pdb_files/8GTK.pdb
+01-Mar-25 12:26:27 - Electrostatic interactions done.
+01-Mar-25 12:26:27 - Getting Van der Waals interactions for pdb file: ./pdb_files/7P5C.pdb
+01-Mar-25 12:26:27 - Van der Waals interactions done.
+01-Mar-25 12:26:27 - Done processing pdb: 6NQ0.pdb
+01-Mar-25 12:26:28 - Van der Waals interactions done.
+01-Mar-25 12:26:28 - Done processing pdb: 5YQZ.pdb
+01-Mar-25 12:26:28 - Electrostatic interactions done.
+01-Mar-25 12:26:28 - Getting Van der Waals interactions for pdb file: ./pdb_files/4JKV.pdb
+01-Mar-25 12:26:28 - Electrostatic interactions done.
+01-Mar-25 12:26:28 - Getting Van der Waals interactions for pdb file: ./pdb_files/7DTV.pdb
+01-Mar-25 12:26:28 - Van der Waals interactions done.
+01-Mar-25 12:26:28 - Done processing pdb: 1OJA.pdb
+01-Mar-25 12:26:28 - Electrostatic interactions done.
+01-Mar-25 12:26:28 - Van der Waals interactions done.
+01-Mar-25 12:26:28 - Getting Van der Waals interactions for pdb file: ./pdb_files/8GTJ.pdb
+01-Mar-25 12:26:28 - Done processing pdb: 6RV3.pdb
+01-Mar-25 12:26:28 - Electrostatic interactions done.
+01-Mar-25 12:26:28 - Getting Van der Waals interactions for pdb file: ./pdb_files/8GTK.pdb
+01-Mar-25 12:26:28 - Van der Waals interactions done.
+01-Mar-25 12:26:28 - Done processing pdb: 7P5C.pdb
+01-Mar-25 12:26:28 - Van der Waals interactions done.
+01-Mar-25 12:26:28 - Done processing pdb: 7RRA.pdb
+01-Mar-25 12:26:28 - Van der Waals interactions done.
+01-Mar-25 12:26:28 - Done processing pdb: 8W6T.pdb
+01-Mar-25 12:26:28 - Van der Waals interactions done.
+01-Mar-25 12:26:28 - Done processing pdb: 7CA3.pdb
+01-Mar-25 12:26:28 - Van der Waals interactions done.
+01-Mar-25 12:26:28 - Done processing pdb: 8GTK.pdb
+01-Mar-25 12:26:29 - Van der Waals interactions done.
+01-Mar-25 12:26:29 - Done processing pdb: 8GTJ.pdb
+01-Mar-25 12:26:29 - Van der Waals interactions done.
+01-Mar-25 12:26:29 - Done processing pdb: 4JKV.pdb
+01-Mar-25 12:26:29 - Van der Waals interactions done.
+01-Mar-25 12:26:29 - Done processing pdb: 7DTV.pdb
+01-Mar-25 12:28:02 - Checking if all pdbs have been fetched...
+01-Mar-25 12:28:02 - Fetching pdbs...
+01-Mar-25 12:28:03 - Processing pdb: 7WMV.pdb
+01-Mar-25 12:28:03 - Getting electrostatic interactions for pdb file: ./pdb_files/7WMV.pdb
+01-Mar-25 12:28:03 - Processing pdb: 9DW5.pdb
+01-Mar-25 12:28:03 - Getting electrostatic interactions for pdb file: ./pdb_files/9DW5.pdb
+01-Mar-25 12:28:03 - Processing pdb: 7VSG.pdb
+01-Mar-25 12:28:03 - Getting electrostatic interactions for pdb file: ./pdb_files/7VSG.pdb
+01-Mar-25 12:28:03 - Processing pdb: 6NQ0.pdb
+01-Mar-25 12:28:03 - Processing pdb: 6RV3.pdb
+01-Mar-25 12:28:03 - Processing pdb: 7RRA.pdb
+01-Mar-25 12:28:03 - Getting electrostatic interactions for pdb file: ./pdb_files/6NQ0.pdb
+01-Mar-25 12:28:03 - Getting electrostatic interactions for pdb file: ./pdb_files/6RV3.pdb
+01-Mar-25 12:28:03 - Processing pdb: 2L34.pdb
+01-Mar-25 12:28:03 - Processing pdb: 7YQ6.pdb
+01-Mar-25 12:28:03 - Getting electrostatic interactions for pdb file: ./pdb_files/7RRA.pdb
+01-Mar-25 12:28:03 - Processing pdb: 6WCB.pdb
+01-Mar-25 12:28:03 - Processing pdb: 6W5V.pdb
+01-Mar-25 12:28:03 - Getting electrostatic interactions for pdb file: ./pdb_files/2L34.pdb
+01-Mar-25 12:28:03 - Processing pdb: 8TGK.pdb
+01-Mar-25 12:28:03 - Getting electrostatic interactions for pdb file: ./pdb_files/7YQ6.pdb
+01-Mar-25 12:28:03 - Processing pdb: 1OJA.pdb
+01-Mar-25 12:28:03 - Getting electrostatic interactions for pdb file: ./pdb_files/6WCB.pdb
+01-Mar-25 12:28:04 - Getting electrostatic interactions for pdb file: ./pdb_files/6W5V.pdb
+01-Mar-25 12:28:04 - Getting electrostatic interactions for pdb file: ./pdb_files/8TGK.pdb
+01-Mar-25 12:28:04 - Getting electrostatic interactions for pdb file: ./pdb_files/1OJA.pdb
+01-Mar-25 12:28:04 - Electrostatic interactions done.
+01-Mar-25 12:28:04 - Getting Van der Waals interactions for pdb file: ./pdb_files/7WMV.pdb
+01-Mar-25 12:28:04 - Electrostatic interactions done.
+01-Mar-25 12:28:04 - Getting Van der Waals interactions for pdb file: ./pdb_files/9DW5.pdb
+01-Mar-25 12:28:04 - Electrostatic interactions done.
+01-Mar-25 12:28:04 - Getting Van der Waals interactions for pdb file: ./pdb_files/7VSG.pdb
+01-Mar-25 12:28:05 - Electrostatic interactions done.
+01-Mar-25 12:28:05 - Getting Van der Waals interactions for pdb file: ./pdb_files/8TGK.pdb
+01-Mar-25 12:28:05 - Electrostatic interactions done.
+01-Mar-25 12:28:05 - Getting Van der Waals interactions for pdb file: ./pdb_files/6NQ0.pdb
+01-Mar-25 12:28:05 - Electrostatic interactions done.
+01-Mar-25 12:28:05 - Getting Van der Waals interactions for pdb file: ./pdb_files/1OJA.pdb
+01-Mar-25 12:28:05 - Electrostatic interactions done.
+01-Mar-25 12:28:05 - Getting Van der Waals interactions for pdb file: ./pdb_files/6WCB.pdb
+01-Mar-25 12:28:05 - Electrostatic interactions done.
+01-Mar-25 12:28:05 - Electrostatic interactions done.
+01-Mar-25 12:28:05 - Getting Van der Waals interactions for pdb file: ./pdb_files/7RRA.pdb
+01-Mar-25 12:28:05 - Getting Van der Waals interactions for pdb file: ./pdb_files/7YQ6.pdb
+01-Mar-25 12:28:05 - Electrostatic interactions done.
+01-Mar-25 12:28:05 - Getting Van der Waals interactions for pdb file: ./pdb_files/6W5V.pdb
+01-Mar-25 12:28:05 - Electrostatic interactions done.
+01-Mar-25 12:28:05 - Getting Van der Waals interactions for pdb file: ./pdb_files/2L34.pdb
+01-Mar-25 12:28:06 - Electrostatic interactions done.
+01-Mar-25 12:28:06 - Getting Van der Waals interactions for pdb file: ./pdb_files/6RV3.pdb
+01-Mar-25 12:28:06 - Van der Waals interactions done.
+01-Mar-25 12:28:06 - Done processing pdb: 7WMV.pdb
+01-Mar-25 12:28:06 - Processing pdb: 7CA3.pdb
+01-Mar-25 12:28:06 - Getting electrostatic interactions for pdb file: ./pdb_files/7CA3.pdb
+01-Mar-25 12:28:06 - Van der Waals interactions done.
+01-Mar-25 12:28:06 - Done processing pdb: 9DW5.pdb
+01-Mar-25 12:28:06 - Processing pdb: 5YQZ.pdb
+01-Mar-25 12:28:06 - Getting electrostatic interactions for pdb file: ./pdb_files/5YQZ.pdb
+01-Mar-25 12:28:07 - Van der Waals interactions done.
+01-Mar-25 12:28:07 - Done processing pdb: 8TGK.pdb
+01-Mar-25 12:28:07 - Processing pdb: 7P5C.pdb
+01-Mar-25 12:28:07 - Getting electrostatic interactions for pdb file: ./pdb_files/7P5C.pdb
+01-Mar-25 12:28:07 - Van der Waals interactions done.
+01-Mar-25 12:28:07 - Done processing pdb: 7YQ6.pdb
+01-Mar-25 12:28:07 - Processing pdb: 8W6T.pdb
+01-Mar-25 12:28:07 - Getting electrostatic interactions for pdb file: ./pdb_files/8W6T.pdb
+01-Mar-25 12:28:07 - Electrostatic interactions done.
+01-Mar-25 12:28:07 - Getting Van der Waals interactions for pdb file: ./pdb_files/5YQZ.pdb
+01-Mar-25 12:28:07 - Van der Waals interactions done.
+01-Mar-25 12:28:07 - Done processing pdb: 6W5V.pdb
+01-Mar-25 12:28:07 - Processing pdb: 4JKV.pdb
+01-Mar-25 12:28:07 - Getting electrostatic interactions for pdb file: ./pdb_files/4JKV.pdb
+01-Mar-25 12:28:07 - Van der Waals interactions done.
+01-Mar-25 12:28:07 - Done processing pdb: 6WCB.pdb
+01-Mar-25 12:28:07 - Processing pdb: 7DTV.pdb
+01-Mar-25 12:28:07 - Getting electrostatic interactions for pdb file: ./pdb_files/7DTV.pdb
+01-Mar-25 12:28:07 - Van der Waals interactions done.
+01-Mar-25 12:28:07 - Done processing pdb: 7VSG.pdb
+01-Mar-25 12:28:07 - Processing pdb: 8GTJ.pdb
+01-Mar-25 12:28:07 - Getting electrostatic interactions for pdb file: ./pdb_files/8GTJ.pdb
+01-Mar-25 12:28:07 - Van der Waals interactions done.
+01-Mar-25 12:28:07 - Done processing pdb: 2L34.pdb
+01-Mar-25 12:28:07 - Processing pdb: 8GTK.pdb
+01-Mar-25 12:28:07 - Getting electrostatic interactions for pdb file: ./pdb_files/8GTK.pdb
+01-Mar-25 12:28:08 - Electrostatic interactions done.
+01-Mar-25 12:28:08 - Getting Van der Waals interactions for pdb file: ./pdb_files/8W6T.pdb
+01-Mar-25 12:28:08 - Electrostatic interactions done.
+01-Mar-25 12:28:08 - Getting Van der Waals interactions for pdb file: ./pdb_files/7P5C.pdb
+01-Mar-25 12:28:08 - Van der Waals interactions done.
+01-Mar-25 12:28:08 - Van der Waals interactions done.
+01-Mar-25 12:28:08 - Done processing pdb: 6NQ0.pdb
+01-Mar-25 12:28:08 - Done processing pdb: 5YQZ.pdb
+01-Mar-25 12:28:08 - Electrostatic interactions done.
+01-Mar-25 12:28:08 - Van der Waals interactions done.
+01-Mar-25 12:28:08 - Getting Van der Waals interactions for pdb file: ./pdb_files/7CA3.pdb
+01-Mar-25 12:28:08 - Done processing pdb: 1OJA.pdb
+01-Mar-25 12:28:08 - Van der Waals interactions done.
+01-Mar-25 12:28:08 - Done processing pdb: 7RRA.pdb
+01-Mar-25 12:28:08 - Electrostatic interactions done.
+01-Mar-25 12:28:08 - Getting Van der Waals interactions for pdb file: ./pdb_files/8GTK.pdb
+01-Mar-25 12:28:09 - Electrostatic interactions done.
+01-Mar-25 12:28:09 - Getting Van der Waals interactions for pdb file: ./pdb_files/4JKV.pdb
+01-Mar-25 12:28:09 - Electrostatic interactions done.
+01-Mar-25 12:28:09 - Getting Van der Waals interactions for pdb file: ./pdb_files/8GTJ.pdb
+01-Mar-25 12:28:09 - Van der Waals interactions done.
+01-Mar-25 12:28:09 - Done processing pdb: 6RV3.pdb
+01-Mar-25 12:28:09 - Electrostatic interactions done.
+01-Mar-25 12:28:09 - Getting Van der Waals interactions for pdb file: ./pdb_files/7DTV.pdb
+01-Mar-25 12:28:09 - Van der Waals interactions done.
+01-Mar-25 12:28:09 - Done processing pdb: 7P5C.pdb
+01-Mar-25 12:28:09 - Van der Waals interactions done.
+01-Mar-25 12:28:09 - Done processing pdb: 8GTK.pdb
+01-Mar-25 12:28:09 - Van der Waals interactions done.
+01-Mar-25 12:28:09 - Done processing pdb: 8W6T.pdb
+01-Mar-25 12:28:09 - Van der Waals interactions done.
+01-Mar-25 12:28:09 - Done processing pdb: 8GTJ.pdb
+01-Mar-25 12:28:09 - Van der Waals interactions done.
+01-Mar-25 12:28:09 - Done processing pdb: 4JKV.pdb
+01-Mar-25 12:28:09 - Van der Waals interactions done.
+01-Mar-25 12:28:09 - Done processing pdb: 7CA3.pdb
+01-Mar-25 12:28:09 - Van der Waals interactions done.
+01-Mar-25 12:28:09 - Done processing pdb: 7DTV.pdb
+2025-03-01 12:28:37,239 - root - INFO - Processing 7WMV...
+2025-03-01 12:28:37,239 - root - INFO - Processing 9DW5...
+2025-03-01 12:28:37,239 - root - INFO - Processing 7VSG...
+2025-03-01 12:28:37,240 - root - INFO - Processing 6NQ0...
+2025-03-01 12:28:37,240 - root - INFO - Processing 6RV3...
+2025-03-01 12:28:37,240 - root - INFO - Processing 7RRA...
+2025-03-01 12:28:37,240 - root - INFO - Processing 2L34...
+2025-03-01 12:28:37,241 - root - INFO - Processing 7YQ6...
+2025-03-01 12:28:37,241 - root - INFO - Processing 6WCB...
+2025-03-01 12:28:37,248 - root - INFO - Processing 6W5V...
+2025-03-01 12:28:37,248 - root - INFO - Processing 8TGK...
+2025-03-01 12:28:37,251 - root - INFO - Processing 1OJA...
+2025-03-01 12:28:37,257 - root - ERROR - Error processing 9DW5: zero-size array to reduction operation minimum which has no identity
+2025-03-01 12:28:37,261 - root - INFO - Processing 7CA3...
+2025-03-01 12:28:37,264 - root - ERROR - Error processing 7YQ6: zero-size array to reduction operation minimum which has no identity
+2025-03-01 12:28:37,264 - root - INFO - Processing 5YQZ...
+2025-03-01 12:28:37,266 - root - ERROR - Error processing 6W5V: zero-size array to reduction operation minimum which has no identity
+2025-03-01 12:28:37,267 - root - INFO - Processing 7P5C...
+2025-03-01 12:28:37,269 - root - ERROR - Error processing 7WMV: zero-size array to reduction operation minimum which has no identity
+2025-03-01 12:28:37,269 - root - INFO - Processing 8W6T...
+2025-03-01 12:28:37,270 - root - ERROR - Error processing 5YQZ: zero-size array to reduction operation minimum which has no identity
+2025-03-01 12:28:37,279 - root - ERROR - Error processing 7RRA: ufunc 'minimum' did not contain a loop with signature matching types (dtype('<U41'), dtype('<U41')) -> None
+2025-03-01 12:28:37,280 - root - INFO - Processing 4JKV...
+2025-03-01 12:28:37,281 - root - INFO - Processing 7DTV...
+2025-03-01 12:29:22,170 - root - ERROR - Error processing 7CA3: name 'temp' is not defined
+2025-03-01 12:29:22,249 - root - INFO - Processing 8GTJ...
+2025-03-01 12:29:26,321 - root - ERROR - Error processing 2L34: name 'temp' is not defined
+2025-03-01 12:29:26,347 - root - INFO - Processing 8GTK...
+2025-03-01 12:29:26,384 - root - ERROR - Error processing 8TGK: name 'temp' is not defined
+2025-03-01 12:29:32,392 - root - ERROR - Error processing 6RV3: name 'temp' is not defined
+2025-03-01 12:29:32,984 - root - ERROR - Error processing 7P5C: name 'temp' is not defined
+2025-03-01 12:29:33,106 - root - ERROR - Error processing 4JKV: name 'temp' is not defined
+2025-03-01 12:29:33,599 - root - ERROR - Error processing 6WCB: name 'temp' is not defined
+2025-03-01 12:29:33,861 - root - ERROR - Error processing 1OJA: name 'temp' is not defined
+2025-03-01 12:29:34,014 - root - ERROR - Error processing 7VSG: name 'temp' is not defined
+2025-03-01 12:29:34,606 - root - ERROR - Error processing 7DTV: name 'temp' is not defined
+2025-03-01 12:29:34,661 - root - ERROR - Error processing 8W6T: name 'temp' is not defined
+2025-03-01 12:29:35,004 - root - ERROR - Error processing 6NQ0: name 'temp' is not defined
+2025-03-01 12:29:43,506 - root - ERROR - Error processing 8GTK: name 'temp' is not defined
+2025-03-01 12:29:43,641 - root - ERROR - Error processing 8GTJ: name 'temp' is not defined
+2025-03-01 12:32:28,606 - root - INFO - Processing 7WMV...
+2025-03-01 12:32:28,606 - root - INFO - Processing 9DW5...
+2025-03-01 12:32:28,606 - root - INFO - Processing 7VSG...
+2025-03-01 12:32:28,606 - root - INFO - Processing 6NQ0...
+2025-03-01 12:32:28,606 - root - INFO - Processing 6RV3...
+2025-03-01 12:32:28,607 - root - INFO - Processing 7RRA...
+2025-03-01 12:32:28,607 - root - INFO - Processing 2L34...
+2025-03-01 12:32:28,607 - root - INFO - Processing 7YQ6...
+2025-03-01 12:32:28,608 - root - INFO - Processing 6WCB...
+2025-03-01 12:32:28,608 - root - INFO - Processing 6W5V...
+2025-03-01 12:32:28,608 - root - INFO - Processing 8TGK...
+2025-03-01 12:32:28,611 - root - INFO - Processing 1OJA...
+2025-03-01 12:32:28,624 - root - ERROR - Error processing 6W5V: zero-size array to reduction operation minimum which has no identity
+Traceback (most recent call last):
+  File "/Users/aaditmahajan/Documents/binary-interfaces/workflow/free_energy.py", line 257, in process_pdb_files
+    z_planes = generate_z_planes(elec_intr, N_PLANES)
+  File "/Users/aaditmahajan/Documents/binary-interfaces/workflow/free_energy.py", line 51, in generate_z_planes
+    z_planes = list(np.linspace(z_values.min(), z_values.max(), N_PLANES))
+  File "/Users/aaditmahajan/.pyenv/versions/anaconda3-2022.10/lib/python3.9/site-packages/numpy/core/_methods.py", line 44, in _amin
+    return umr_minimum(a, axis, None, out, keepdims, initial, where)
+ValueError: zero-size array to reduction operation minimum which has no identity
+2025-03-01 12:32:28,626 - root - ERROR - Error processing 7WMV: zero-size array to reduction operation minimum which has no identity
+Traceback (most recent call last):
+  File "/Users/aaditmahajan/Documents/binary-interfaces/workflow/free_energy.py", line 257, in process_pdb_files
+    z_planes = generate_z_planes(elec_intr, N_PLANES)
+  File "/Users/aaditmahajan/Documents/binary-interfaces/workflow/free_energy.py", line 51, in generate_z_planes
+    z_planes = list(np.linspace(z_values.min(), z_values.max(), N_PLANES))
+  File "/Users/aaditmahajan/.pyenv/versions/anaconda3-2022.10/lib/python3.9/site-packages/numpy/core/_methods.py", line 44, in _amin
+    return umr_minimum(a, axis, None, out, keepdims, initial, where)
+ValueError: zero-size array to reduction operation minimum which has no identity
+2025-03-01 12:32:28,628 - root - ERROR - Error processing 7YQ6: zero-size array to reduction operation minimum which has no identity
+Traceback (most recent call last):
+  File "/Users/aaditmahajan/Documents/binary-interfaces/workflow/free_energy.py", line 257, in process_pdb_files
+    z_planes = generate_z_planes(elec_intr, N_PLANES)
+  File "/Users/aaditmahajan/Documents/binary-interfaces/workflow/free_energy.py", line 51, in generate_z_planes
+    z_planes = list(np.linspace(z_values.min(), z_values.max(), N_PLANES))
+  File "/Users/aaditmahajan/.pyenv/versions/anaconda3-2022.10/lib/python3.9/site-packages/numpy/core/_methods.py", line 44, in _amin
+    return umr_minimum(a, axis, None, out, keepdims, initial, where)
+ValueError: zero-size array to reduction operation minimum which has no identity
+2025-03-01 12:32:28,630 - root - ERROR - Error processing 9DW5: zero-size array to reduction operation minimum which has no identity
+Traceback (most recent call last):
+  File "/Users/aaditmahajan/Documents/binary-interfaces/workflow/free_energy.py", line 257, in process_pdb_files
+    z_planes = generate_z_planes(elec_intr, N_PLANES)
+  File "/Users/aaditmahajan/Documents/binary-interfaces/workflow/free_energy.py", line 51, in generate_z_planes
+    z_planes = list(np.linspace(z_values.min(), z_values.max(), N_PLANES))
+  File "/Users/aaditmahajan/.pyenv/versions/anaconda3-2022.10/lib/python3.9/site-packages/numpy/core/_methods.py", line 44, in _amin
+    return umr_minimum(a, axis, None, out, keepdims, initial, where)
+ValueError: zero-size array to reduction operation minimum which has no identity
+2025-03-01 12:32:28,633 - root - INFO - Processing 7CA3...
+2025-03-01 12:32:28,640 - root - ERROR - Error processing 7RRA: ufunc 'minimum' did not contain a loop with signature matching types (dtype('<U41'), dtype('<U41')) -> None
+Traceback (most recent call last):
+  File "/Users/aaditmahajan/Documents/binary-interfaces/workflow/free_energy.py", line 257, in process_pdb_files
+    z_planes = generate_z_planes(elec_intr, N_PLANES)
+  File "/Users/aaditmahajan/Documents/binary-interfaces/workflow/free_energy.py", line 51, in generate_z_planes
+    z_planes = list(np.linspace(z_values.min(), z_values.max(), N_PLANES))
+  File "/Users/aaditmahajan/.pyenv/versions/anaconda3-2022.10/lib/python3.9/site-packages/numpy/core/_methods.py", line 44, in _amin
+    return umr_minimum(a, axis, None, out, keepdims, initial, where)
+numpy.core._exceptions._UFuncNoLoopError: ufunc 'minimum' did not contain a loop with signature matching types (dtype('<U41'), dtype('<U41')) -> None
+2025-03-01 12:32:28,641 - root - INFO - Processing 5YQZ...
+2025-03-01 12:32:28,672 - root - INFO - Processing 7P5C...
+2025-03-01 12:32:28,686 - root - INFO - Processing 8W6T...
+2025-03-01 12:32:28,702 - root - INFO - Processing 4JKV...
+2025-03-01 12:32:28,756 - root - ERROR - Error processing 5YQZ: zero-size array to reduction operation minimum which has no identity
+Traceback (most recent call last):
+  File "/Users/aaditmahajan/Documents/binary-interfaces/workflow/free_energy.py", line 257, in process_pdb_files
+    z_planes = generate_z_planes(elec_intr, N_PLANES)
+  File "/Users/aaditmahajan/Documents/binary-interfaces/workflow/free_energy.py", line 51, in generate_z_planes
+    z_planes = list(np.linspace(z_values.min(), z_values.max(), N_PLANES))
+  File "/Users/aaditmahajan/.pyenv/versions/anaconda3-2022.10/lib/python3.9/site-packages/numpy/core/_methods.py", line 44, in _amin
+    return umr_minimum(a, axis, None, out, keepdims, initial, where)
+ValueError: zero-size array to reduction operation minimum which has no identity
+2025-03-01 12:32:28,814 - root - INFO - Processing 7DTV...
+2025-03-01 12:33:18,518 - root - ERROR - Error processing 2L34: name 'temp' is not defined
+Traceback (most recent call last):
+  File "/Users/aaditmahajan/Documents/binary-interfaces/workflow/free_energy.py", line 284, in process_pdb_files
+    min_g_vals_groups = calculate_partial_deltaG(fin_master_matrix, min_energy_struct_elem)
+  File "/Users/aaditmahajan/Documents/binary-interfaces/workflow/free_energy.py", line 196, in calculate_partial_deltaG
+    min_g_vals_groups['g_part'] = -R * temp * np.log(min_g_vals_groups.partial_z)
+NameError: name 'temp' is not defined
+2025-03-01 12:33:18,734 - root - INFO - Processing 8GTJ...
+2025-03-01 12:33:20,734 - root - ERROR - Error processing 1OJA: name 'temp' is not defined
+Traceback (most recent call last):
+  File "/Users/aaditmahajan/Documents/binary-interfaces/workflow/free_energy.py", line 284, in process_pdb_files
+    min_g_vals_groups = calculate_partial_deltaG(fin_master_matrix, min_energy_struct_elem)
+  File "/Users/aaditmahajan/Documents/binary-interfaces/workflow/free_energy.py", line 196, in calculate_partial_deltaG
+    min_g_vals_groups['g_part'] = -R * temp * np.log(min_g_vals_groups.partial_z)
+NameError: name 'temp' is not defined
+2025-03-01 12:33:20,771 - root - INFO - Processing 8GTK...
+2025-03-01 12:33:21,319 - root - ERROR - Error processing 4JKV: name 'temp' is not defined
+Traceback (most recent call last):
+  File "/Users/aaditmahajan/Documents/binary-interfaces/workflow/free_energy.py", line 284, in process_pdb_files
+    min_g_vals_groups = calculate_partial_deltaG(fin_master_matrix, min_energy_struct_elem)
+  File "/Users/aaditmahajan/Documents/binary-interfaces/workflow/free_energy.py", line 196, in calculate_partial_deltaG
+    min_g_vals_groups['g_part'] = -R * temp * np.log(min_g_vals_groups.partial_z)
+NameError: name 'temp' is not defined
+2025-03-01 12:33:21,802 - root - ERROR - Error processing 6WCB: name 'temp' is not defined
+Traceback (most recent call last):
+  File "/Users/aaditmahajan/Documents/binary-interfaces/workflow/free_energy.py", line 284, in process_pdb_files
+    min_g_vals_groups = calculate_partial_deltaG(fin_master_matrix, min_energy_struct_elem)
+  File "/Users/aaditmahajan/Documents/binary-interfaces/workflow/free_energy.py", line 196, in calculate_partial_deltaG
+    min_g_vals_groups['g_part'] = -R * temp * np.log(min_g_vals_groups.partial_z)
+NameError: name 'temp' is not defined
+2025-03-01 12:33:24,069 - root - ERROR - Error processing 8TGK: name 'temp' is not defined
+Traceback (most recent call last):
+  File "/Users/aaditmahajan/Documents/binary-interfaces/workflow/free_energy.py", line 284, in process_pdb_files
+    min_g_vals_groups = calculate_partial_deltaG(fin_master_matrix, min_energy_struct_elem)
+  File "/Users/aaditmahajan/Documents/binary-interfaces/workflow/free_energy.py", line 196, in calculate_partial_deltaG
+    min_g_vals_groups['g_part'] = -R * temp * np.log(min_g_vals_groups.partial_z)
+NameError: name 'temp' is not defined
+2025-03-01 12:33:24,130 - root - ERROR - Error processing 7VSG: name 'temp' is not defined
+Traceback (most recent call last):
+  File "/Users/aaditmahajan/Documents/binary-interfaces/workflow/free_energy.py", line 284, in process_pdb_files
+    min_g_vals_groups = calculate_partial_deltaG(fin_master_matrix, min_energy_struct_elem)
+  File "/Users/aaditmahajan/Documents/binary-interfaces/workflow/free_energy.py", line 196, in calculate_partial_deltaG
+    min_g_vals_groups['g_part'] = -R * temp * np.log(min_g_vals_groups.partial_z)
+NameError: name 'temp' is not defined
+2025-03-01 12:33:24,130 - root - ERROR - Error processing 6NQ0: name 'temp' is not defined
+Traceback (most recent call last):
+  File "/Users/aaditmahajan/Documents/binary-interfaces/workflow/free_energy.py", line 284, in process_pdb_files
+    min_g_vals_groups = calculate_partial_deltaG(fin_master_matrix, min_energy_struct_elem)
+  File "/Users/aaditmahajan/Documents/binary-interfaces/workflow/free_energy.py", line 196, in calculate_partial_deltaG
+    min_g_vals_groups['g_part'] = -R * temp * np.log(min_g_vals_groups.partial_z)
+NameError: name 'temp' is not defined
+2025-03-01 12:33:24,473 - root - ERROR - Error processing 7DTV: name 'temp' is not defined
+Traceback (most recent call last):
+  File "/Users/aaditmahajan/Documents/binary-interfaces/workflow/free_energy.py", line 284, in process_pdb_files
+    min_g_vals_groups = calculate_partial_deltaG(fin_master_matrix, min_energy_struct_elem)
+  File "/Users/aaditmahajan/Documents/binary-interfaces/workflow/free_energy.py", line 196, in calculate_partial_deltaG
+    min_g_vals_groups['g_part'] = -R * temp * np.log(min_g_vals_groups.partial_z)
+NameError: name 'temp' is not defined
+2025-03-01 12:33:25,127 - root - ERROR - Error processing 7CA3: name 'temp' is not defined
+Traceback (most recent call last):
+  File "/Users/aaditmahajan/Documents/binary-interfaces/workflow/free_energy.py", line 284, in process_pdb_files
+    min_g_vals_groups = calculate_partial_deltaG(fin_master_matrix, min_energy_struct_elem)
+  File "/Users/aaditmahajan/Documents/binary-interfaces/workflow/free_energy.py", line 196, in calculate_partial_deltaG
+    min_g_vals_groups['g_part'] = -R * temp * np.log(min_g_vals_groups.partial_z)
+NameError: name 'temp' is not defined
+2025-03-01 12:33:25,814 - root - ERROR - Error processing 6RV3: name 'temp' is not defined
+Traceback (most recent call last):
+  File "/Users/aaditmahajan/Documents/binary-interfaces/workflow/free_energy.py", line 284, in process_pdb_files
+    min_g_vals_groups = calculate_partial_deltaG(fin_master_matrix, min_energy_struct_elem)
+  File "/Users/aaditmahajan/Documents/binary-interfaces/workflow/free_energy.py", line 196, in calculate_partial_deltaG
+    min_g_vals_groups['g_part'] = -R * temp * np.log(min_g_vals_groups.partial_z)
+NameError: name 'temp' is not defined
+2025-03-01 12:33:25,814 - root - ERROR - Error processing 7P5C: name 'temp' is not defined
+Traceback (most recent call last):
+  File "/Users/aaditmahajan/Documents/binary-interfaces/workflow/free_energy.py", line 284, in process_pdb_files
+    min_g_vals_groups = calculate_partial_deltaG(fin_master_matrix, min_energy_struct_elem)
+  File "/Users/aaditmahajan/Documents/binary-interfaces/workflow/free_energy.py", line 196, in calculate_partial_deltaG
+    min_g_vals_groups['g_part'] = -R * temp * np.log(min_g_vals_groups.partial_z)
+NameError: name 'temp' is not defined
+2025-03-01 12:33:25,888 - root - ERROR - Error processing 8W6T: name 'temp' is not defined
+Traceback (most recent call last):
+  File "/Users/aaditmahajan/Documents/binary-interfaces/workflow/free_energy.py", line 284, in process_pdb_files
+    min_g_vals_groups = calculate_partial_deltaG(fin_master_matrix, min_energy_struct_elem)
+  File "/Users/aaditmahajan/Documents/binary-interfaces/workflow/free_energy.py", line 196, in calculate_partial_deltaG
+    min_g_vals_groups['g_part'] = -R * temp * np.log(min_g_vals_groups.partial_z)
+NameError: name 'temp' is not defined
+2025-03-01 12:33:34,268 - root - ERROR - Error processing 8GTK: name 'temp' is not defined
+Traceback (most recent call last):
+  File "/Users/aaditmahajan/Documents/binary-interfaces/workflow/free_energy.py", line 284, in process_pdb_files
+    min_g_vals_groups = calculate_partial_deltaG(fin_master_matrix, min_energy_struct_elem)
+  File "/Users/aaditmahajan/Documents/binary-interfaces/workflow/free_energy.py", line 196, in calculate_partial_deltaG
+    min_g_vals_groups['g_part'] = -R * temp * np.log(min_g_vals_groups.partial_z)
+NameError: name 'temp' is not defined
+2025-03-01 12:51:51,459 - root - INFO - Processing 7WMV...
+2025-03-01 12:51:51,459 - root - INFO - Processing 9DW5...
+2025-03-01 12:51:51,459 - root - INFO - Processing 7VSG...
+2025-03-01 12:51:51,460 - root - INFO - Processing 6NQ0...
+2025-03-01 12:51:51,461 - root - INFO - Processing 6RV3...
+2025-03-01 12:51:51,467 - root - INFO - Processing 7RRA...
+2025-03-01 12:51:51,468 - root - INFO - Processing 2L34...
+2025-03-01 12:51:51,468 - root - INFO - Processing 7YQ6...
+2025-03-01 12:51:51,470 - root - INFO - Processing 6WCB...
+2025-03-01 12:51:51,471 - root - INFO - Processing 6W5V...
+2025-03-01 12:51:51,473 - root - ERROR - Error processing 9DW5: zero-size array to reduction operation minimum which has no identity
+Traceback (most recent call last):
+  File "/Users/aaditmahajan/Documents/binary-interfaces/workflow/free_energy.py", line 235, in process_pdb_files
+    z_planes = generate_z_planes(elec_intr, N_PLANES)
+  File "/Users/aaditmahajan/Documents/binary-interfaces/workflow/free_energy.py", line 51, in generate_z_planes
+    z_planes = list(np.linspace(z_values.min(), z_values.max(), N_PLANES))
+  File "/Users/aaditmahajan/.pyenv/versions/anaconda3-2022.10/lib/python3.9/site-packages/numpy/core/_methods.py", line 44, in _amin
+    return umr_minimum(a, axis, None, out, keepdims, initial, where)
+ValueError: zero-size array to reduction operation minimum which has no identity
+2025-03-01 12:51:51,473 - root - ERROR - Error processing 7WMV: zero-size array to reduction operation minimum which has no identity
+Traceback (most recent call last):
+  File "/Users/aaditmahajan/Documents/binary-interfaces/workflow/free_energy.py", line 235, in process_pdb_files
+    z_planes = generate_z_planes(elec_intr, N_PLANES)
+  File "/Users/aaditmahajan/Documents/binary-interfaces/workflow/free_energy.py", line 51, in generate_z_planes
+    z_planes = list(np.linspace(z_values.min(), z_values.max(), N_PLANES))
+  File "/Users/aaditmahajan/.pyenv/versions/anaconda3-2022.10/lib/python3.9/site-packages/numpy/core/_methods.py", line 44, in _amin
+    return umr_minimum(a, axis, None, out, keepdims, initial, where)
+ValueError: zero-size array to reduction operation minimum which has no identity
+2025-03-01 12:51:51,484 - root - ERROR - Error processing 7YQ6: zero-size array to reduction operation minimum which has no identity
+Traceback (most recent call last):
+  File "/Users/aaditmahajan/Documents/binary-interfaces/workflow/free_energy.py", line 235, in process_pdb_files
+    z_planes = generate_z_planes(elec_intr, N_PLANES)
+  File "/Users/aaditmahajan/Documents/binary-interfaces/workflow/free_energy.py", line 51, in generate_z_planes
+    z_planes = list(np.linspace(z_values.min(), z_values.max(), N_PLANES))
+  File "/Users/aaditmahajan/.pyenv/versions/anaconda3-2022.10/lib/python3.9/site-packages/numpy/core/_methods.py", line 44, in _amin
+    return umr_minimum(a, axis, None, out, keepdims, initial, where)
+ValueError: zero-size array to reduction operation minimum which has no identity
+2025-03-01 12:51:51,484 - root - INFO - Processing 8TGK...
+2025-03-01 12:51:51,487 - root - INFO - Processing 1OJA...
+2025-03-01 12:51:51,488 - root - ERROR - Error processing 6W5V: zero-size array to reduction operation minimum which has no identity
+Traceback (most recent call last):
+  File "/Users/aaditmahajan/Documents/binary-interfaces/workflow/free_energy.py", line 235, in process_pdb_files
+    z_planes = generate_z_planes(elec_intr, N_PLANES)
+  File "/Users/aaditmahajan/Documents/binary-interfaces/workflow/free_energy.py", line 51, in generate_z_planes
+    z_planes = list(np.linspace(z_values.min(), z_values.max(), N_PLANES))
+  File "/Users/aaditmahajan/.pyenv/versions/anaconda3-2022.10/lib/python3.9/site-packages/numpy/core/_methods.py", line 44, in _amin
+    return umr_minimum(a, axis, None, out, keepdims, initial, where)
+ValueError: zero-size array to reduction operation minimum which has no identity
+2025-03-01 12:51:51,490 - root - INFO - Processing 7CA3...
+2025-03-01 12:51:51,492 - root - INFO - Processing 5YQZ...
+2025-03-01 12:51:51,493 - root - INFO - Processing 7P5C...
+2025-03-01 12:51:51,522 - root - ERROR - Error processing 7RRA: ufunc 'minimum' did not contain a loop with signature matching types (dtype('<U41'), dtype('<U41')) -> None
+Traceback (most recent call last):
+  File "/Users/aaditmahajan/Documents/binary-interfaces/workflow/free_energy.py", line 235, in process_pdb_files
+    z_planes = generate_z_planes(elec_intr, N_PLANES)
+  File "/Users/aaditmahajan/Documents/binary-interfaces/workflow/free_energy.py", line 51, in generate_z_planes
+    z_planes = list(np.linspace(z_values.min(), z_values.max(), N_PLANES))
+  File "/Users/aaditmahajan/.pyenv/versions/anaconda3-2022.10/lib/python3.9/site-packages/numpy/core/_methods.py", line 44, in _amin
+    return umr_minimum(a, axis, None, out, keepdims, initial, where)
+numpy.core._exceptions._UFuncNoLoopError: ufunc 'minimum' did not contain a loop with signature matching types (dtype('<U41'), dtype('<U41')) -> None
+2025-03-01 12:51:51,529 - root - INFO - Processing 8W6T...
+2025-03-01 12:51:51,578 - root - INFO - Processing 4JKV...
+2025-03-01 12:51:51,636 - root - ERROR - Error processing 5YQZ: zero-size array to reduction operation minimum which has no identity
+Traceback (most recent call last):
+  File "/Users/aaditmahajan/Documents/binary-interfaces/workflow/free_energy.py", line 235, in process_pdb_files
+    z_planes = generate_z_planes(elec_intr, N_PLANES)
+  File "/Users/aaditmahajan/Documents/binary-interfaces/workflow/free_energy.py", line 51, in generate_z_planes
+    z_planes = list(np.linspace(z_values.min(), z_values.max(), N_PLANES))
+  File "/Users/aaditmahajan/.pyenv/versions/anaconda3-2022.10/lib/python3.9/site-packages/numpy/core/_methods.py", line 44, in _amin
+    return umr_minimum(a, axis, None, out, keepdims, initial, where)
+ValueError: zero-size array to reduction operation minimum which has no identity
+2025-03-01 12:51:51,636 - root - INFO - Processing 7DTV...
+2025-03-01 12:52:42,527 - root - INFO - Finished processing 7CA3...
+2025-03-01 12:52:42,559 - root - INFO - Processing 8GTJ...
+2025-03-01 12:52:44,204 - root - INFO - Finished processing 7VSG...
+2025-03-01 12:52:44,251 - root - INFO - Processing 8GTK...
+2025-03-01 12:52:44,869 - root - INFO - Finished processing 6NQ0...
+2025-03-01 12:52:46,796 - root - INFO - Finished processing 2L34...
+2025-03-01 12:52:48,362 - root - INFO - Finished processing 8TGK...
+2025-03-01 12:52:48,716 - root - INFO - Finished processing 4JKV...
+2025-03-01 12:52:48,752 - root - INFO - Finished processing 1OJA...
+2025-03-01 12:52:49,442 - root - INFO - Finished processing 7P5C...
+2025-03-01 12:52:49,996 - root - INFO - Finished processing 7DTV...
+2025-03-01 12:52:50,056 - root - INFO - Finished processing 8W6T...
+2025-03-01 12:52:50,733 - root - INFO - Finished processing 6WCB...
+2025-03-01 12:52:50,736 - root - INFO - Finished processing 6RV3...
+2025-03-01 12:52:59,615 - root - INFO - Finished processing 8GTJ...
+2025-03-01 12:52:59,682 - root - INFO - Finished processing 8GTK...
+2025-03-01 12:56:35,723 - root - INFO - Processing 7WMV...
+2025-03-01 12:56:35,724 - root - INFO - Processing 9DW5...
+2025-03-01 12:56:35,724 - root - INFO - Processing 7VSG...
+2025-03-01 12:56:35,724 - root - INFO - Processing 6NQ0...
+2025-03-01 12:56:35,724 - root - INFO - Processing 6RV3...
+2025-03-01 12:56:35,724 - root - INFO - Processing 7RRA...
+2025-03-01 12:56:35,724 - root - INFO - Processing 2L34...
+2025-03-01 12:56:35,724 - root - INFO - Processing 7YQ6...
+2025-03-01 12:56:35,725 - root - INFO - Processing 6WCB...
+2025-03-01 12:56:35,725 - root - INFO - Processing 6W5V...
+2025-03-01 12:56:35,727 - root - INFO - Processing 8TGK...
+2025-03-01 12:56:35,728 - root - INFO - Processing 1OJA...
+2025-03-01 12:56:35,746 - root - ERROR - Error processing 7YQ6: 'section'
+Traceback (most recent call last):
+  File "/Users/aaditmahajan/Documents/binary-interfaces/workflow/free_energy.py", line 253, in process_pdb_files
+    fin_master_matrix = get_sw_values(master_matrix, elec_intr, vdw_intr, temp)
+  File "/Users/aaditmahajan/Documents/binary-interfaces/workflow/free_energy.py", line 161, in get_sw_values
+    vdw_intr_sec_grp = vdw_intr.groupby('section')
+  File "/Users/aaditmahajan/.pyenv/versions/anaconda3-2022.10/lib/python3.9/site-packages/pandas/core/frame.py", line 7721, in groupby
+    return DataFrameGroupBy(
+  File "/Users/aaditmahajan/.pyenv/versions/anaconda3-2022.10/lib/python3.9/site-packages/pandas/core/groupby/groupby.py", line 882, in __init__
+    grouper, exclusions, obj = get_grouper(
+  File "/Users/aaditmahajan/.pyenv/versions/anaconda3-2022.10/lib/python3.9/site-packages/pandas/core/groupby/grouper.py", line 882, in get_grouper
+    raise KeyError(gpr)
+KeyError: 'section'
+2025-03-01 12:56:35,746 - root - ERROR - Error processing 6W5V: 'section'
+Traceback (most recent call last):
+  File "/Users/aaditmahajan/Documents/binary-interfaces/workflow/free_energy.py", line 253, in process_pdb_files
+    fin_master_matrix = get_sw_values(master_matrix, elec_intr, vdw_intr, temp)
+  File "/Users/aaditmahajan/Documents/binary-interfaces/workflow/free_energy.py", line 161, in get_sw_values
+    vdw_intr_sec_grp = vdw_intr.groupby('section')
+  File "/Users/aaditmahajan/.pyenv/versions/anaconda3-2022.10/lib/python3.9/site-packages/pandas/core/frame.py", line 7721, in groupby
+    return DataFrameGroupBy(
+  File "/Users/aaditmahajan/.pyenv/versions/anaconda3-2022.10/lib/python3.9/site-packages/pandas/core/groupby/groupby.py", line 882, in __init__
+    grouper, exclusions, obj = get_grouper(
+  File "/Users/aaditmahajan/.pyenv/versions/anaconda3-2022.10/lib/python3.9/site-packages/pandas/core/groupby/grouper.py", line 882, in get_grouper
+    raise KeyError(gpr)
+KeyError: 'section'
+2025-03-01 12:56:35,748 - root - ERROR - Error processing 9DW5: 'section'
+Traceback (most recent call last):
+  File "/Users/aaditmahajan/Documents/binary-interfaces/workflow/free_energy.py", line 253, in process_pdb_files
+    fin_master_matrix = get_sw_values(master_matrix, elec_intr, vdw_intr, temp)
+  File "/Users/aaditmahajan/Documents/binary-interfaces/workflow/free_energy.py", line 161, in get_sw_values
+    vdw_intr_sec_grp = vdw_intr.groupby('section')
+  File "/Users/aaditmahajan/.pyenv/versions/anaconda3-2022.10/lib/python3.9/site-packages/pandas/core/frame.py", line 7721, in groupby
+    return DataFrameGroupBy(
+  File "/Users/aaditmahajan/.pyenv/versions/anaconda3-2022.10/lib/python3.9/site-packages/pandas/core/groupby/groupby.py", line 882, in __init__
+    grouper, exclusions, obj = get_grouper(
+  File "/Users/aaditmahajan/.pyenv/versions/anaconda3-2022.10/lib/python3.9/site-packages/pandas/core/groupby/grouper.py", line 882, in get_grouper
+    raise KeyError(gpr)
+KeyError: 'section'
+2025-03-01 12:56:35,752 - root - ERROR - Error processing 7WMV: 'section'
+Traceback (most recent call last):
+  File "/Users/aaditmahajan/Documents/binary-interfaces/workflow/free_energy.py", line 253, in process_pdb_files
+    fin_master_matrix = get_sw_values(master_matrix, elec_intr, vdw_intr, temp)
+  File "/Users/aaditmahajan/Documents/binary-interfaces/workflow/free_energy.py", line 162, in get_sw_values
+    elec_intr_sec_grp = elec_intr.groupby('section')
+  File "/Users/aaditmahajan/.pyenv/versions/anaconda3-2022.10/lib/python3.9/site-packages/pandas/core/frame.py", line 7721, in groupby
+    return DataFrameGroupBy(
+  File "/Users/aaditmahajan/.pyenv/versions/anaconda3-2022.10/lib/python3.9/site-packages/pandas/core/groupby/groupby.py", line 882, in __init__
+    grouper, exclusions, obj = get_grouper(
+  File "/Users/aaditmahajan/.pyenv/versions/anaconda3-2022.10/lib/python3.9/site-packages/pandas/core/groupby/grouper.py", line 882, in get_grouper
+    raise KeyError(gpr)
+KeyError: 'section'
+2025-03-01 12:56:35,760 - root - ERROR - Error processing 7RRA: ufunc 'minimum' did not contain a loop with signature matching types (dtype('<U41'), dtype('<U41')) -> None
+Traceback (most recent call last):
+  File "/Users/aaditmahajan/Documents/binary-interfaces/workflow/free_energy.py", line 237, in process_pdb_files
+    z_planes = generate_z_planes(elec_intr, N_PLANES)
+  File "/Users/aaditmahajan/Documents/binary-interfaces/workflow/free_energy.py", line 53, in generate_z_planes
+    z_planes = list(np.linspace(z_values.min(), z_values.max(), N_PLANES))
+  File "/Users/aaditmahajan/.pyenv/versions/anaconda3-2022.10/lib/python3.9/site-packages/numpy/core/_methods.py", line 44, in _amin
+    return umr_minimum(a, axis, None, out, keepdims, initial, where)
+numpy.core._exceptions._UFuncNoLoopError: ufunc 'minimum' did not contain a loop with signature matching types (dtype('<U41'), dtype('<U41')) -> None
+2025-03-01 12:56:36,430 - root - INFO - Processing 7CA3...
+2025-03-01 12:56:36,519 - root - INFO - Processing 5YQZ...
+2025-03-01 12:56:36,563 - root - INFO - Processing 7P5C...
+2025-03-01 12:56:36,599 - root - INFO - Processing 8W6T...
+2025-03-01 12:56:36,675 - root - INFO - Processing 4JKV...
+2025-03-01 12:56:36,874 - root - ERROR - Error processing 5YQZ: 'section'
+Traceback (most recent call last):
+  File "/Users/aaditmahajan/Documents/binary-interfaces/workflow/free_energy.py", line 253, in process_pdb_files
+    fin_master_matrix = get_sw_values(master_matrix, elec_intr, vdw_intr, temp)
+  File "/Users/aaditmahajan/Documents/binary-interfaces/workflow/free_energy.py", line 161, in get_sw_values
+    vdw_intr_sec_grp = vdw_intr.groupby('section')
+  File "/Users/aaditmahajan/.pyenv/versions/anaconda3-2022.10/lib/python3.9/site-packages/pandas/core/frame.py", line 7721, in groupby
+    return DataFrameGroupBy(
+  File "/Users/aaditmahajan/.pyenv/versions/anaconda3-2022.10/lib/python3.9/site-packages/pandas/core/groupby/groupby.py", line 882, in __init__
+    grouper, exclusions, obj = get_grouper(
+  File "/Users/aaditmahajan/.pyenv/versions/anaconda3-2022.10/lib/python3.9/site-packages/pandas/core/groupby/grouper.py", line 882, in get_grouper
+    raise KeyError(gpr)
+KeyError: 'section'
+2025-03-01 12:56:36,876 - root - INFO - Processing 7DTV...
+2025-03-01 12:57:25,268 - root - INFO - Finished processing 7VSG...
+2025-03-01 12:57:25,557 - root - INFO - Processing 8GTJ...
+2025-03-01 12:57:28,672 - root - INFO - Finished processing 7CA3...
+2025-03-01 12:57:28,674 - root - INFO - Processing 8GTK...
+2025-03-01 12:57:32,016 - root - INFO - Finished processing 1OJA...
+2025-03-01 12:57:32,205 - root - INFO - Finished processing 8W6T...
+2025-03-01 12:57:32,376 - root - INFO - Finished processing 8TGK...
+2025-03-01 12:57:33,459 - root - INFO - Finished processing 6RV3...
+2025-03-01 12:57:34,004 - root - INFO - Finished processing 4JKV...
+2025-03-01 12:57:34,097 - root - INFO - Finished processing 2L34...
+2025-03-01 12:57:34,190 - root - INFO - Finished processing 7P5C...
+2025-03-01 12:57:34,192 - root - INFO - Finished processing 6NQ0...
+2025-03-01 12:57:34,219 - root - INFO - Finished processing 7DTV...
+2025-03-01 12:57:34,393 - root - INFO - Finished processing 6WCB...
+2025-03-01 12:57:43,187 - root - INFO - Finished processing 8GTK...
+2025-03-01 12:57:43,273 - root - INFO - Finished processing 8GTJ...
+01-Mar-25 13:00:07 - Checking if all pdbs have been fetched...
+01-Mar-25 13:00:07 - Fetching pdbs...
+01-Mar-25 13:00:08 - Processing pdb: 7WMV.pdb
+01-Mar-25 13:00:08 - Processing pdb: 9DW5.pdb
+01-Mar-25 13:00:08 - Processing pdb: 7VSG.pdb
+01-Mar-25 13:00:08 - Getting electrostatic interactions for pdb file: ./pdb_files/7WMV.pdb
+01-Mar-25 13:00:08 - Processing pdb: 6NQ0.pdb
+01-Mar-25 13:00:08 - Getting electrostatic interactions for pdb file: ./pdb_files/9DW5.pdb
+01-Mar-25 13:00:08 - Processing pdb: 6RV3.pdb
+01-Mar-25 13:00:08 - Getting electrostatic interactions for pdb file: ./pdb_files/7VSG.pdb
+01-Mar-25 13:00:08 - Processing pdb: 7RRA.pdb
+01-Mar-25 13:00:08 - Processing pdb: 2L34.pdb
+01-Mar-25 13:00:08 - Getting electrostatic interactions for pdb file: ./pdb_files/6NQ0.pdb
+01-Mar-25 13:00:08 - Processing pdb: 7YQ6.pdb
+01-Mar-25 13:00:08 - Processing pdb: 6WCB.pdb
+01-Mar-25 13:00:08 - Getting electrostatic interactions for pdb file: ./pdb_files/6RV3.pdb
+01-Mar-25 13:00:08 - Processing pdb: 6W5V.pdb
+01-Mar-25 13:00:08 - Processing pdb: 8TGK.pdb
+01-Mar-25 13:00:08 - Processing pdb: 1OJA.pdb
+01-Mar-25 13:00:08 - Getting electrostatic interactions for pdb file: ./pdb_files/7RRA.pdb
+01-Mar-25 13:00:08 - Getting electrostatic interactions for pdb file: ./pdb_files/2L34.pdb
+01-Mar-25 13:00:08 - Getting electrostatic interactions for pdb file: ./pdb_files/7YQ6.pdb
+01-Mar-25 13:00:08 - Getting electrostatic interactions for pdb file: ./pdb_files/6WCB.pdb
+01-Mar-25 13:00:08 - Getting electrostatic interactions for pdb file: ./pdb_files/6W5V.pdb
+01-Mar-25 13:00:08 - Getting electrostatic interactions for pdb file: ./pdb_files/8TGK.pdb
+01-Mar-25 13:00:08 - Getting electrostatic interactions for pdb file: ./pdb_files/1OJA.pdb
+01-Mar-25 13:00:09 - Electrostatic interactions done.
+01-Mar-25 13:00:09 - Getting Van der Waals interactions for pdb file: ./pdb_files/7WMV.pdb
+01-Mar-25 13:00:09 - Electrostatic interactions done.
+01-Mar-25 13:00:09 - Getting Van der Waals interactions for pdb file: ./pdb_files/9DW5.pdb
+01-Mar-25 13:00:09 - Electrostatic interactions done.
+01-Mar-25 13:00:09 - Getting Van der Waals interactions for pdb file: ./pdb_files/7VSG.pdb
+01-Mar-25 13:00:09 - Electrostatic interactions done.
+01-Mar-25 13:00:09 - Getting Van der Waals interactions for pdb file: ./pdb_files/6NQ0.pdb
+01-Mar-25 13:00:09 - Electrostatic interactions done.
+01-Mar-25 13:00:09 - Getting Van der Waals interactions for pdb file: ./pdb_files/8TGK.pdb
+01-Mar-25 13:00:09 - Electrostatic interactions done.
+01-Mar-25 13:00:09 - Getting Van der Waals interactions for pdb file: ./pdb_files/6WCB.pdb
+01-Mar-25 13:00:09 - Electrostatic interactions done.
+01-Mar-25 13:00:09 - Getting Van der Waals interactions for pdb file: ./pdb_files/1OJA.pdb
+01-Mar-25 13:00:10 - Electrostatic interactions done.
+01-Mar-25 13:00:10 - Getting Van der Waals interactions for pdb file: ./pdb_files/6RV3.pdb
+01-Mar-25 13:00:10 - Electrostatic interactions done.
+01-Mar-25 13:00:10 - Getting Van der Waals interactions for pdb file: ./pdb_files/7YQ6.pdb
+01-Mar-25 13:00:10 - Electrostatic interactions done.
+01-Mar-25 13:00:10 - Getting Van der Waals interactions for pdb file: ./pdb_files/2L34.pdb
+01-Mar-25 13:00:10 - Van der Waals interactions done.
+01-Mar-25 13:00:10 - Done processing pdb: 7WMV.pdb
+NoneType: None
+01-Mar-25 13:00:10 - Van der Waals interactions done.
+01-Mar-25 13:00:10 - Processing pdb: 7CA3.pdb
+01-Mar-25 13:00:10 - Electrostatic interactions done.
+01-Mar-25 13:00:10 - Getting Van der Waals interactions for pdb file: ./pdb_files/6W5V.pdb
+01-Mar-25 13:00:10 - Done processing pdb: 9DW5.pdb
+NoneType: None
+01-Mar-25 13:00:10 - Processing pdb: 5YQZ.pdb
+01-Mar-25 13:00:10 - Getting electrostatic interactions for pdb file: ./pdb_files/7CA3.pdb
+01-Mar-25 13:00:10 - Getting electrostatic interactions for pdb file: ./pdb_files/5YQZ.pdb
+01-Mar-25 13:00:10 - Electrostatic interactions done.
+01-Mar-25 13:00:10 - Getting Van der Waals interactions for pdb file: ./pdb_files/7RRA.pdb
+01-Mar-25 13:00:11 - Van der Waals interactions done.
+01-Mar-25 13:00:11 - Done processing pdb: 8TGK.pdb
+NoneType: None
+01-Mar-25 13:00:11 - Processing pdb: 7P5C.pdb
+01-Mar-25 13:00:11 - Getting electrostatic interactions for pdb file: ./pdb_files/7P5C.pdb
+01-Mar-25 13:00:11 - Van der Waals interactions done.
+01-Mar-25 13:00:11 - Done processing pdb: 7YQ6.pdb
+NoneType: None
+01-Mar-25 13:00:11 - Processing pdb: 8W6T.pdb
+01-Mar-25 13:00:11 - Getting electrostatic interactions for pdb file: ./pdb_files/8W6T.pdb
+01-Mar-25 13:00:11 - Van der Waals interactions done.
+01-Mar-25 13:00:11 - Done processing pdb: 2L34.pdb
+NoneType: None
+01-Mar-25 13:00:11 - Processing pdb: 4JKV.pdb
+01-Mar-25 13:00:11 - Getting electrostatic interactions for pdb file: ./pdb_files/4JKV.pdb
+01-Mar-25 13:00:11 - Electrostatic interactions done.
+01-Mar-25 13:00:11 - Getting Van der Waals interactions for pdb file: ./pdb_files/5YQZ.pdb
+01-Mar-25 13:00:11 - Van der Waals interactions done.
+01-Mar-25 13:00:12 - Done processing pdb: 6WCB.pdb
+NoneType: None
+01-Mar-25 13:00:12 - Processing pdb: 7DTV.pdb
+01-Mar-25 13:00:12 - Getting electrostatic interactions for pdb file: ./pdb_files/7DTV.pdb
+01-Mar-25 13:00:12 - Electrostatic interactions done.
+01-Mar-25 13:00:12 - Getting Van der Waals interactions for pdb file: ./pdb_files/7P5C.pdb
+01-Mar-25 13:00:12 - Electrostatic interactions done.
+01-Mar-25 13:00:12 - Van der Waals interactions done.
+01-Mar-25 13:00:12 - Getting Van der Waals interactions for pdb file: ./pdb_files/7CA3.pdb
+01-Mar-25 13:00:12 - Done processing pdb: 6W5V.pdb
+NoneType: None
+01-Mar-25 13:00:12 - Processing pdb: 8GTJ.pdb
+01-Mar-25 13:00:12 - Getting electrostatic interactions for pdb file: ./pdb_files/8GTJ.pdb
+01-Mar-25 13:00:12 - Electrostatic interactions done.
+01-Mar-25 13:00:12 - Getting Van der Waals interactions for pdb file: ./pdb_files/8W6T.pdb
+01-Mar-25 13:00:12 - Van der Waals interactions done.
+01-Mar-25 13:00:12 - Done processing pdb: 6NQ0.pdb
+NoneType: None
+01-Mar-25 13:00:12 - Processing pdb: 8GTK.pdb
+01-Mar-25 13:00:12 - Getting electrostatic interactions for pdb file: ./pdb_files/8GTK.pdb
+01-Mar-25 13:00:13 - Van der Waals interactions done.
+01-Mar-25 13:00:13 - Done processing pdb: 1OJA.pdb
+NoneType: None
+01-Mar-25 13:00:13 - Van der Waals interactions done.
+01-Mar-25 13:00:13 - Done processing pdb: 5YQZ.pdb
+NoneType: None
+01-Mar-25 13:00:13 - Van der Waals interactions done.
+01-Mar-25 13:00:13 - Done processing pdb: 7VSG.pdb
+NoneType: None
+01-Mar-25 13:00:13 - Electrostatic interactions done.
+01-Mar-25 13:00:13 - Getting Van der Waals interactions for pdb file: ./pdb_files/7DTV.pdb
+01-Mar-25 13:00:13 - Electrostatic interactions done.
+01-Mar-25 13:00:13 - Getting Van der Waals interactions for pdb file: ./pdb_files/4JKV.pdb
+01-Mar-25 13:00:13 - Electrostatic interactions done.
+01-Mar-25 13:00:13 - Getting Van der Waals interactions for pdb file: ./pdb_files/8GTJ.pdb
+01-Mar-25 13:00:13 - Electrostatic interactions done.
+01-Mar-25 13:00:13 - Getting Van der Waals interactions for pdb file: ./pdb_files/8GTK.pdb
+01-Mar-25 13:00:13 - Van der Waals interactions done.
+01-Mar-25 13:00:13 - Done processing pdb: 7P5C.pdb
+NoneType: None
+01-Mar-25 13:00:13 - Van der Waals interactions done.
+01-Mar-25 13:00:13 - Done processing pdb: 6RV3.pdb
+NoneType: None
+01-Mar-25 13:00:14 - Van der Waals interactions done.
+01-Mar-25 13:00:14 - Done processing pdb: 7RRA.pdb
+NoneType: None
+01-Mar-25 13:00:14 - Van der Waals interactions done.
+01-Mar-25 13:00:14 - Van der Waals interactions done.
+01-Mar-25 13:00:14 - Done processing pdb: 8W6T.pdb
+NoneType: None
+01-Mar-25 13:00:14 - Done processing pdb: 7CA3.pdb
+NoneType: None
+01-Mar-25 13:00:14 - Van der Waals interactions done.
+01-Mar-25 13:00:14 - Done processing pdb: 8GTK.pdb
+NoneType: None
+01-Mar-25 13:00:14 - Van der Waals interactions done.
+01-Mar-25 13:00:14 - Done processing pdb: 8GTJ.pdb
+NoneType: None
+01-Mar-25 13:00:14 - Van der Waals interactions done.
+01-Mar-25 13:00:14 - Done processing pdb: 4JKV.pdb
+NoneType: None
+01-Mar-25 13:00:14 - Van der Waals interactions done.
+01-Mar-25 13:00:14 - Done processing pdb: 7DTV.pdb
+NoneType: None
+01-Mar-25 13:01:50 - Checking if all pdbs have been fetched...
+01-Mar-25 13:01:50 - Fetching pdbs...
+01-Mar-25 13:01:50 - Processing pdb: 7WMV.pdb
+01-Mar-25 13:01:50 - Getting electrostatic interactions for pdb file: ./pdb_files/7WMV.pdb
+01-Mar-25 13:01:50 - Processing pdb: 9DW5.pdb
+01-Mar-25 13:01:50 - Getting electrostatic interactions for pdb file: ./pdb_files/9DW5.pdb
+01-Mar-25 13:01:50 - Processing pdb: 7VSG.pdb
+01-Mar-25 13:01:50 - Getting electrostatic interactions for pdb file: ./pdb_files/7VSG.pdb
+01-Mar-25 13:01:50 - Processing pdb: 6NQ0.pdb
+01-Mar-25 13:01:50 - Getting electrostatic interactions for pdb file: ./pdb_files/6NQ0.pdb
+01-Mar-25 13:01:51 - Processing pdb: 6RV3.pdb
+01-Mar-25 13:01:51 - Processing pdb: 2L34.pdb
+01-Mar-25 13:01:51 - Getting electrostatic interactions for pdb file: ./pdb_files/6RV3.pdb
+01-Mar-25 13:01:51 - Processing pdb: 7YQ6.pdb
+01-Mar-25 13:01:51 - Getting electrostatic interactions for pdb file: ./pdb_files/2L34.pdb
+01-Mar-25 13:01:51 - Processing pdb: 6WCB.pdb
+01-Mar-25 13:01:51 - Processing pdb: 6W5V.pdb
+01-Mar-25 13:01:51 - Processing pdb: 8TGK.pdb
+01-Mar-25 13:01:51 - Processing pdb: 1OJA.pdb
+01-Mar-25 13:01:51 - Processing pdb: 7CA3.pdb
+01-Mar-25 13:01:51 - Getting electrostatic interactions for pdb file: ./pdb_files/7YQ6.pdb
+01-Mar-25 13:01:51 - Getting electrostatic interactions for pdb file: ./pdb_files/6WCB.pdb
+01-Mar-25 13:01:51 - Getting electrostatic interactions for pdb file: ./pdb_files/6W5V.pdb
+01-Mar-25 13:01:51 - Getting electrostatic interactions for pdb file: ./pdb_files/8TGK.pdb
+01-Mar-25 13:01:51 - Getting electrostatic interactions for pdb file: ./pdb_files/1OJA.pdb
+01-Mar-25 13:01:51 - Getting electrostatic interactions for pdb file: ./pdb_files/7CA3.pdb
+01-Mar-25 13:01:52 - Electrostatic interactions done.
+01-Mar-25 13:01:52 - Getting Van der Waals interactions for pdb file: ./pdb_files/8TGK.pdb
+01-Mar-25 13:01:52 - Electrostatic interactions done.
+01-Mar-25 13:01:52 - Electrostatic interactions done.
+01-Mar-25 13:01:52 - Electrostatic interactions done.
+01-Mar-25 13:01:52 - Getting Van der Waals interactions for pdb file: ./pdb_files/7WMV.pdb
+01-Mar-25 13:01:52 - Getting Van der Waals interactions for pdb file: ./pdb_files/6NQ0.pdb
+01-Mar-25 13:01:52 - Getting Van der Waals interactions for pdb file: ./pdb_files/9DW5.pdb
+01-Mar-25 13:01:52 - Electrostatic interactions done.
+01-Mar-25 13:01:52 - Getting Van der Waals interactions for pdb file: ./pdb_files/7VSG.pdb
+01-Mar-25 13:01:52 - Electrostatic interactions done.
+01-Mar-25 13:01:52 - Getting Van der Waals interactions for pdb file: ./pdb_files/2L34.pdb
+01-Mar-25 13:01:52 - Electrostatic interactions done.
+01-Mar-25 13:01:52 - Getting Van der Waals interactions for pdb file: ./pdb_files/7YQ6.pdb
+01-Mar-25 13:01:53 - Electrostatic interactions done.
+01-Mar-25 13:01:53 - Electrostatic interactions done.
+01-Mar-25 13:01:53 - Getting Van der Waals interactions for pdb file: ./pdb_files/6RV3.pdb
+01-Mar-25 13:01:53 - Electrostatic interactions done.
+01-Mar-25 13:01:53 - Getting Van der Waals interactions for pdb file: ./pdb_files/6WCB.pdb
+01-Mar-25 13:01:53 - Getting Van der Waals interactions for pdb file: ./pdb_files/1OJA.pdb
+01-Mar-25 13:01:53 - Electrostatic interactions done.
+01-Mar-25 13:01:53 - Getting Van der Waals interactions for pdb file: ./pdb_files/7CA3.pdb
+01-Mar-25 13:01:53 - Van der Waals interactions done.
+01-Mar-25 13:01:53 - Done processing pdb: 8TGK.pdb
+NoneType: None
+01-Mar-25 13:01:53 - Processing pdb: 5YQZ.pdb
+01-Mar-25 13:01:53 - Getting electrostatic interactions for pdb file: ./pdb_files/5YQZ.pdb
+01-Mar-25 13:01:53 - Electrostatic interactions done.
+01-Mar-25 13:01:53 - Getting Van der Waals interactions for pdb file: ./pdb_files/6W5V.pdb
+01-Mar-25 13:01:53 - Van der Waals interactions done.
+01-Mar-25 13:01:53 - Done processing pdb: 7WMV.pdb
+NoneType: None
+01-Mar-25 13:01:53 - Processing pdb: 8W6D.pdb
+01-Mar-25 13:01:53 - Getting electrostatic interactions for pdb file: ./pdb_files/8W6D.pdb
+01-Mar-25 13:01:53 - Van der Waals interactions done.
+01-Mar-25 13:01:53 - Done processing pdb: 9DW5.pdb
+NoneType: None
+01-Mar-25 13:01:53 - Processing pdb: 7P5C.pdb
+01-Mar-25 13:01:53 - Getting electrostatic interactions for pdb file: ./pdb_files/7P5C.pdb
+01-Mar-25 13:01:54 - Van der Waals interactions done.
+01-Mar-25 13:01:54 - Done processing pdb: 7YQ6.pdb
+NoneType: None
+01-Mar-25 13:01:54 - Processing pdb: 8W6T.pdb
+01-Mar-25 13:01:54 - Getting electrostatic interactions for pdb file: ./pdb_files/8W6T.pdb
+01-Mar-25 13:01:54 - Electrostatic interactions done.
+01-Mar-25 13:01:54 - Getting Van der Waals interactions for pdb file: ./pdb_files/5YQZ.pdb
+01-Mar-25 13:01:54 - Electrostatic interactions done.
+01-Mar-25 13:01:54 - Getting Van der Waals interactions for pdb file: ./pdb_files/7P5C.pdb
+01-Mar-25 13:01:54 - Van der Waals interactions done.
+01-Mar-25 13:01:54 - Done processing pdb: 2L34.pdb
+NoneType: None
+01-Mar-25 13:01:54 - Processing pdb: 4JKV.pdb
+01-Mar-25 13:01:54 - Getting electrostatic interactions for pdb file: ./pdb_files/4JKV.pdb
+01-Mar-25 13:01:54 - Van der Waals interactions done.
+01-Mar-25 13:01:54 - Done processing pdb: 6NQ0.pdb
+NoneType: None
+01-Mar-25 13:01:54 - Processing pdb: 7DTV.pdb
+01-Mar-25 13:01:54 - Getting electrostatic interactions for pdb file: ./pdb_files/7DTV.pdb
+01-Mar-25 13:01:54 - Electrostatic interactions done.
+01-Mar-25 13:01:54 - Getting Van der Waals interactions for pdb file: ./pdb_files/8W6D.pdb
+01-Mar-25 13:01:55 - Van der Waals interactions done.
+01-Mar-25 13:01:55 - Done processing pdb: 6WCB.pdb
+NoneType: None
+01-Mar-25 13:01:55 - Processing pdb: 8GTJ.pdb
+01-Mar-25 13:01:55 - Getting electrostatic interactions for pdb file: ./pdb_files/8GTJ.pdb
+01-Mar-25 13:01:55 - Van der Waals interactions done.
+01-Mar-25 13:01:55 - Done processing pdb: 6W5V.pdb
+NoneType: None
+01-Mar-25 13:01:55 - Processing pdb: 8GTK.pdb
+01-Mar-25 13:01:55 - Getting electrostatic interactions for pdb file: ./pdb_files/8GTK.pdb
+01-Mar-25 13:01:55 - Electrostatic interactions done.
+01-Mar-25 13:01:55 - Getting Van der Waals interactions for pdb file: ./pdb_files/8W6T.pdb
+01-Mar-25 13:01:55 - Van der Waals interactions done.
+01-Mar-25 13:01:55 - Done processing pdb: 7VSG.pdb
+NoneType: None
+01-Mar-25 13:01:55 - Van der Waals interactions done.
+01-Mar-25 13:01:55 - Done processing pdb: 5YQZ.pdb
+NoneType: None
+01-Mar-25 13:01:55 - Van der Waals interactions done.
+01-Mar-25 13:01:55 - Done processing pdb: 7CA3.pdb
+NoneType: None
+01-Mar-25 13:01:55 - Electrostatic interactions done.
+01-Mar-25 13:01:55 - Getting Van der Waals interactions for pdb file: ./pdb_files/7DTV.pdb
+01-Mar-25 13:01:55 - Electrostatic interactions done.
+01-Mar-25 13:01:55 - Getting Van der Waals interactions for pdb file: ./pdb_files/8GTK.pdb
+01-Mar-25 13:01:55 - Van der Waals interactions done.
+01-Mar-25 13:01:55 - Van der Waals interactions done.
+01-Mar-25 13:01:55 - Done processing pdb: 1OJA.pdb
+NoneType: None
+01-Mar-25 13:01:56 - Done processing pdb: 7P5C.pdb
+NoneType: None
+01-Mar-25 13:01:56 - Electrostatic interactions done.
+01-Mar-25 13:01:56 - Getting Van der Waals interactions for pdb file: ./pdb_files/8GTJ.pdb
+01-Mar-25 13:01:56 - Electrostatic interactions done.
+01-Mar-25 13:01:56 - Getting Van der Waals interactions for pdb file: ./pdb_files/4JKV.pdb
+01-Mar-25 13:01:56 - Van der Waals interactions done.
+01-Mar-25 13:01:56 - Done processing pdb: 6RV3.pdb
+NoneType: None
+01-Mar-25 13:01:56 - Van der Waals interactions done.
+01-Mar-25 13:01:56 - Done processing pdb: 8W6D.pdb
+NoneType: None
+01-Mar-25 13:01:56 - Van der Waals interactions done.
+01-Mar-25 13:01:56 - Done processing pdb: 8GTK.pdb
+NoneType: None
+01-Mar-25 13:01:56 - Van der Waals interactions done.
+01-Mar-25 13:01:56 - Done processing pdb: 8W6T.pdb
+NoneType: None
+01-Mar-25 13:01:56 - Van der Waals interactions done.
+01-Mar-25 13:01:56 - Done processing pdb: 8GTJ.pdb
+NoneType: None
+01-Mar-25 13:01:56 - Van der Waals interactions done.
+01-Mar-25 13:01:56 - Done processing pdb: 4JKV.pdb
+NoneType: None
+01-Mar-25 13:01:56 - Van der Waals interactions done.
+01-Mar-25 13:01:56 - Done processing pdb: 7DTV.pdb
+NoneType: None
+2025-03-01 13:02:07,635 - root - INFO - Processing 7WMV...
+2025-03-01 13:02:07,647 - root - ERROR - Error processing 7WMV: 'section'
+Traceback (most recent call last):
+  File "/Users/aaditmahajan/Documents/binary-interfaces/workflow/free_energy.py", line 253, in process_pdb_files
+    fin_master_matrix = get_sw_values(master_matrix, elec_intr, vdw_intr, temp)
+  File "/Users/aaditmahajan/Documents/binary-interfaces/workflow/free_energy.py", line 162, in get_sw_values
+    elec_intr_sec_grp = elec_intr.groupby('section')
+  File "/Users/aaditmahajan/.pyenv/versions/anaconda3-2022.10/lib/python3.9/site-packages/pandas/core/frame.py", line 7721, in groupby
+    return DataFrameGroupBy(
+  File "/Users/aaditmahajan/.pyenv/versions/anaconda3-2022.10/lib/python3.9/site-packages/pandas/core/groupby/groupby.py", line 882, in __init__
+    grouper, exclusions, obj = get_grouper(
+  File "/Users/aaditmahajan/.pyenv/versions/anaconda3-2022.10/lib/python3.9/site-packages/pandas/core/groupby/grouper.py", line 882, in get_grouper
+    raise KeyError(gpr)
+KeyError: 'section'
+2025-03-01 13:02:07,648 - root - INFO - Processing 9DW5...
+2025-03-01 13:02:07,648 - root - INFO - Processing 7VSG...
+2025-03-01 13:02:07,648 - root - INFO - Processing 6NQ0...
+2025-03-01 13:02:07,648 - root - INFO - Processing 6RV3...
+2025-03-01 13:02:07,648 - root - INFO - Processing 2L34...
+2025-03-01 13:02:07,648 - root - INFO - Processing 7YQ6...
+2025-03-01 13:02:07,649 - root - INFO - Processing 6WCB...
+2025-03-01 13:02:07,651 - root - INFO - Processing 6W5V...
+2025-03-01 13:02:07,652 - root - INFO - Processing 8TGK...
+2025-03-01 13:02:07,653 - root - INFO - Processing 1OJA...
+2025-03-01 13:02:07,655 - root - INFO - Processing 7CA3...
+2025-03-01 13:02:07,657 - root - INFO - Processing 5YQZ...
+2025-03-01 13:02:07,693 - root - ERROR - Error processing 9DW5: 'section'
+Traceback (most recent call last):
+  File "/Users/aaditmahajan/Documents/binary-interfaces/workflow/free_energy.py", line 253, in process_pdb_files
+    fin_master_matrix = get_sw_values(master_matrix, elec_intr, vdw_intr, temp)
+  File "/Users/aaditmahajan/Documents/binary-interfaces/workflow/free_energy.py", line 161, in get_sw_values
+    vdw_intr_sec_grp = vdw_intr.groupby('section')
+  File "/Users/aaditmahajan/.pyenv/versions/anaconda3-2022.10/lib/python3.9/site-packages/pandas/core/frame.py", line 7721, in groupby
+    return DataFrameGroupBy(
+  File "/Users/aaditmahajan/.pyenv/versions/anaconda3-2022.10/lib/python3.9/site-packages/pandas/core/groupby/groupby.py", line 882, in __init__
+    grouper, exclusions, obj = get_grouper(
+  File "/Users/aaditmahajan/.pyenv/versions/anaconda3-2022.10/lib/python3.9/site-packages/pandas/core/groupby/grouper.py", line 882, in get_grouper
+    raise KeyError(gpr)
+KeyError: 'section'
+2025-03-01 13:02:07,750 - root - ERROR - Error processing 7YQ6: 'section'
+Traceback (most recent call last):
+  File "/Users/aaditmahajan/Documents/binary-interfaces/workflow/free_energy.py", line 253, in process_pdb_files
+    fin_master_matrix = get_sw_values(master_matrix, elec_intr, vdw_intr, temp)
+  File "/Users/aaditmahajan/Documents/binary-interfaces/workflow/free_energy.py", line 161, in get_sw_values
+    vdw_intr_sec_grp = vdw_intr.groupby('section')
+  File "/Users/aaditmahajan/.pyenv/versions/anaconda3-2022.10/lib/python3.9/site-packages/pandas/core/frame.py", line 7721, in groupby
+    return DataFrameGroupBy(
+  File "/Users/aaditmahajan/.pyenv/versions/anaconda3-2022.10/lib/python3.9/site-packages/pandas/core/groupby/groupby.py", line 882, in __init__
+    grouper, exclusions, obj = get_grouper(
+  File "/Users/aaditmahajan/.pyenv/versions/anaconda3-2022.10/lib/python3.9/site-packages/pandas/core/groupby/grouper.py", line 882, in get_grouper
+    raise KeyError(gpr)
+KeyError: 'section'
+2025-03-01 13:02:07,757 - root - ERROR - Error processing 6W5V: 'section'
+Traceback (most recent call last):
+  File "/Users/aaditmahajan/Documents/binary-interfaces/workflow/free_energy.py", line 253, in process_pdb_files
+    fin_master_matrix = get_sw_values(master_matrix, elec_intr, vdw_intr, temp)
+  File "/Users/aaditmahajan/Documents/binary-interfaces/workflow/free_energy.py", line 161, in get_sw_values
+    vdw_intr_sec_grp = vdw_intr.groupby('section')
+  File "/Users/aaditmahajan/.pyenv/versions/anaconda3-2022.10/lib/python3.9/site-packages/pandas/core/frame.py", line 7721, in groupby
+    return DataFrameGroupBy(
+  File "/Users/aaditmahajan/.pyenv/versions/anaconda3-2022.10/lib/python3.9/site-packages/pandas/core/groupby/groupby.py", line 882, in __init__
+    grouper, exclusions, obj = get_grouper(
+  File "/Users/aaditmahajan/.pyenv/versions/anaconda3-2022.10/lib/python3.9/site-packages/pandas/core/groupby/grouper.py", line 882, in get_grouper
+    raise KeyError(gpr)
+KeyError: 'section'
+2025-03-01 13:02:07,792 - root - ERROR - Error processing 5YQZ: 'section'
+Traceback (most recent call last):
+  File "/Users/aaditmahajan/Documents/binary-interfaces/workflow/free_energy.py", line 253, in process_pdb_files
+    fin_master_matrix = get_sw_values(master_matrix, elec_intr, vdw_intr, temp)
+  File "/Users/aaditmahajan/Documents/binary-interfaces/workflow/free_energy.py", line 161, in get_sw_values
+    vdw_intr_sec_grp = vdw_intr.groupby('section')
+  File "/Users/aaditmahajan/.pyenv/versions/anaconda3-2022.10/lib/python3.9/site-packages/pandas/core/frame.py", line 7721, in groupby
+    return DataFrameGroupBy(
+  File "/Users/aaditmahajan/.pyenv/versions/anaconda3-2022.10/lib/python3.9/site-packages/pandas/core/groupby/groupby.py", line 882, in __init__
+    grouper, exclusions, obj = get_grouper(
+  File "/Users/aaditmahajan/.pyenv/versions/anaconda3-2022.10/lib/python3.9/site-packages/pandas/core/groupby/grouper.py", line 882, in get_grouper
+    raise KeyError(gpr)
+KeyError: 'section'
+2025-03-01 13:02:07,792 - root - INFO - Processing 8W6D...
+2025-03-01 13:02:07,835 - root - INFO - Processing 7P5C...
+2025-03-01 13:02:07,908 - root - INFO - Processing 8W6T...
+2025-03-01 13:02:08,000 - root - INFO - Processing 4JKV...
+2025-03-01 13:03:00,590 - root - INFO - Finished processing 4JKV...
+2025-03-01 13:03:00,637 - root - INFO - Processing 7DTV...
+2025-03-01 13:03:02,174 - root - INFO - Finished processing 8W6D...
+2025-03-01 13:03:02,212 - root - INFO - Processing 8GTJ...
+2025-03-01 13:03:03,764 - root - INFO - Finished processing 6NQ0...
+2025-03-01 13:03:03,764 - root - INFO - Processing 8GTK...
+2025-03-01 13:03:03,886 - root - INFO - Finished processing 8TGK...
+2025-03-01 13:03:03,907 - root - INFO - Finished processing 7VSG...
+2025-03-01 13:03:04,007 - root - INFO - Finished processing 7P5C...
+2025-03-01 13:03:04,143 - root - INFO - Finished processing 6RV3...
+2025-03-01 13:03:04,182 - root - INFO - Finished processing 1OJA...
+2025-03-01 13:03:04,223 - root - INFO - Finished processing 8W6T...
+2025-03-01 13:03:04,273 - root - INFO - Finished processing 2L34...
+2025-03-01 13:03:04,424 - root - INFO - Finished processing 7CA3...
+2025-03-01 13:03:04,490 - root - INFO - Finished processing 6WCB...
+2025-03-01 13:03:17,718 - root - INFO - Finished processing 8GTJ...
+2025-03-01 13:03:17,765 - root - INFO - Finished processing 7DTV...
+2025-03-01 13:03:17,780 - root - INFO - Finished processing 8GTK...
+2025-03-01 23:17:21,440 - root - INFO - Processing 7WMV...
+2025-03-01 23:17:21,440 - root - INFO - Processing 9DW5...
+2025-03-01 23:17:21,440 - root - INFO - Processing 7VSG...
+2025-03-01 23:17:21,440 - root - INFO - Processing 6NQ0...
+2025-03-01 23:17:21,440 - root - INFO - Processing 6RV3...
+2025-03-01 23:17:21,440 - root - INFO - Processing 2L34...
+2025-03-01 23:17:21,441 - root - INFO - Processing 7YQ6...
+2025-03-01 23:17:21,441 - root - INFO - Processing 6WCB...
+2025-03-01 23:17:21,441 - root - INFO - Processing 6W5V...
+2025-03-01 23:17:21,441 - root - INFO - Processing 8TGK...
+2025-03-01 23:17:21,442 - root - INFO - Processing 1OJA...
+2025-03-01 23:17:21,442 - root - INFO - Processing 7CA3...
+2025-03-01 23:17:21,457 - root - ERROR - Error processing 7YQ6: 'section'
+Traceback (most recent call last):
+  File "/Users/aaditmahajan/Documents/binary-interfaces/workflow/free_energy.py", line 253, in process_pdb_files
+    fin_master_matrix = get_sw_values(master_matrix, elec_intr, vdw_intr, temp)
+  File "/Users/aaditmahajan/Documents/binary-interfaces/workflow/free_energy.py", line 161, in get_sw_values
+    vdw_intr_sec_grp = vdw_intr.groupby('section')
+  File "/Users/aaditmahajan/.pyenv/versions/anaconda3-2022.10/lib/python3.9/site-packages/pandas/core/frame.py", line 7721, in groupby
+    return DataFrameGroupBy(
+  File "/Users/aaditmahajan/.pyenv/versions/anaconda3-2022.10/lib/python3.9/site-packages/pandas/core/groupby/groupby.py", line 882, in __init__
+    grouper, exclusions, obj = get_grouper(
+  File "/Users/aaditmahajan/.pyenv/versions/anaconda3-2022.10/lib/python3.9/site-packages/pandas/core/groupby/grouper.py", line 882, in get_grouper
+    raise KeyError(gpr)
+KeyError: 'section'
+2025-03-01 23:17:21,470 - root - ERROR - Error processing 6W5V: 'section'
+Traceback (most recent call last):
+  File "/Users/aaditmahajan/Documents/binary-interfaces/workflow/free_energy.py", line 253, in process_pdb_files
+    fin_master_matrix = get_sw_values(master_matrix, elec_intr, vdw_intr, temp)
+  File "/Users/aaditmahajan/Documents/binary-interfaces/workflow/free_energy.py", line 161, in get_sw_values
+    vdw_intr_sec_grp = vdw_intr.groupby('section')
+  File "/Users/aaditmahajan/.pyenv/versions/anaconda3-2022.10/lib/python3.9/site-packages/pandas/core/frame.py", line 7721, in groupby
+    return DataFrameGroupBy(
+  File "/Users/aaditmahajan/.pyenv/versions/anaconda3-2022.10/lib/python3.9/site-packages/pandas/core/groupby/groupby.py", line 882, in __init__
+    grouper, exclusions, obj = get_grouper(
+  File "/Users/aaditmahajan/.pyenv/versions/anaconda3-2022.10/lib/python3.9/site-packages/pandas/core/groupby/grouper.py", line 882, in get_grouper
+    raise KeyError(gpr)
+KeyError: 'section'
+2025-03-01 23:17:21,478 - root - ERROR - Error processing 7WMV: 'section'
+Traceback (most recent call last):
+  File "/Users/aaditmahajan/Documents/binary-interfaces/workflow/free_energy.py", line 253, in process_pdb_files
+    fin_master_matrix = get_sw_values(master_matrix, elec_intr, vdw_intr, temp)
+  File "/Users/aaditmahajan/Documents/binary-interfaces/workflow/free_energy.py", line 162, in get_sw_values
+    elec_intr_sec_grp = elec_intr.groupby('section')
+  File "/Users/aaditmahajan/.pyenv/versions/anaconda3-2022.10/lib/python3.9/site-packages/pandas/core/frame.py", line 7721, in groupby
+    return DataFrameGroupBy(
+  File "/Users/aaditmahajan/.pyenv/versions/anaconda3-2022.10/lib/python3.9/site-packages/pandas/core/groupby/groupby.py", line 882, in __init__
+    grouper, exclusions, obj = get_grouper(
+  File "/Users/aaditmahajan/.pyenv/versions/anaconda3-2022.10/lib/python3.9/site-packages/pandas/core/groupby/grouper.py", line 882, in get_grouper
+    raise KeyError(gpr)
+KeyError: 'section'
+2025-03-01 23:17:21,487 - root - ERROR - Error processing 9DW5: 'section'
+Traceback (most recent call last):
+  File "/Users/aaditmahajan/Documents/binary-interfaces/workflow/free_energy.py", line 253, in process_pdb_files
+    fin_master_matrix = get_sw_values(master_matrix, elec_intr, vdw_intr, temp)
+  File "/Users/aaditmahajan/Documents/binary-interfaces/workflow/free_energy.py", line 161, in get_sw_values
+    vdw_intr_sec_grp = vdw_intr.groupby('section')
+  File "/Users/aaditmahajan/.pyenv/versions/anaconda3-2022.10/lib/python3.9/site-packages/pandas/core/frame.py", line 7721, in groupby
+    return DataFrameGroupBy(
+  File "/Users/aaditmahajan/.pyenv/versions/anaconda3-2022.10/lib/python3.9/site-packages/pandas/core/groupby/groupby.py", line 882, in __init__
+    grouper, exclusions, obj = get_grouper(
+  File "/Users/aaditmahajan/.pyenv/versions/anaconda3-2022.10/lib/python3.9/site-packages/pandas/core/groupby/grouper.py", line 882, in get_grouper
+    raise KeyError(gpr)
+KeyError: 'section'
+2025-03-01 23:17:22,079 - root - INFO - Processing 5YQZ...
+2025-03-01 23:17:23,103 - root - INFO - Processing 8W6D...
+2025-03-01 23:17:23,492 - root - INFO - Processing 7P5C...
+2025-03-01 23:17:23,908 - root - INFO - Processing 8W6T...
+2025-03-01 23:17:24,154 - root - ERROR - Error processing 5YQZ: 'section'
+Traceback (most recent call last):
+  File "/Users/aaditmahajan/Documents/binary-interfaces/workflow/free_energy.py", line 253, in process_pdb_files
+    fin_master_matrix = get_sw_values(master_matrix, elec_intr, vdw_intr, temp)
+  File "/Users/aaditmahajan/Documents/binary-interfaces/workflow/free_energy.py", line 161, in get_sw_values
+    vdw_intr_sec_grp = vdw_intr.groupby('section')
+  File "/Users/aaditmahajan/.pyenv/versions/anaconda3-2022.10/lib/python3.9/site-packages/pandas/core/frame.py", line 7721, in groupby
+    return DataFrameGroupBy(
+  File "/Users/aaditmahajan/.pyenv/versions/anaconda3-2022.10/lib/python3.9/site-packages/pandas/core/groupby/groupby.py", line 882, in __init__
+    grouper, exclusions, obj = get_grouper(
+  File "/Users/aaditmahajan/.pyenv/versions/anaconda3-2022.10/lib/python3.9/site-packages/pandas/core/groupby/grouper.py", line 882, in get_grouper
+    raise KeyError(gpr)
+KeyError: 'section'
+2025-03-01 23:17:24,203 - root - INFO - Processing 4JKV...
+2025-03-01 23:18:52,257 - root - INFO - Finished processing 6WCB...
+2025-03-01 23:18:52,308 - root - INFO - Processing 7DTV...
+2025-03-01 23:18:53,928 - root - INFO - Finished processing 8TGK...
+2025-03-01 23:18:54,070 - root - INFO - Processing 8GTJ...
+2025-03-01 23:18:55,042 - root - INFO - Finished processing 2L34...
+2025-03-01 23:18:55,105 - root - INFO - Processing 8GTK...
+2025-03-01 23:18:58,433 - root - INFO - Finished processing 8W6T...
+2025-03-01 23:18:58,606 - root - INFO - Finished processing 8W6D...
+2025-03-01 23:18:58,976 - root - INFO - Finished processing 6RV3...
+2025-03-01 23:18:59,647 - root - INFO - Finished processing 1OJA...
+2025-03-01 23:19:00,121 - root - INFO - Finished processing 7P5C...
+2025-03-01 23:19:00,168 - root - INFO - Finished processing 6NQ0...
+2025-03-01 23:19:00,268 - root - INFO - Finished processing 4JKV...
+2025-03-01 23:19:00,553 - root - INFO - Finished processing 7CA3...
+2025-03-01 23:19:00,665 - root - INFO - Finished processing 7VSG...
+2025-03-01 23:19:20,564 - root - INFO - Finished processing 7DTV...
+2025-03-01 23:19:20,731 - root - INFO - Finished processing 8GTJ...
+2025-03-01 23:19:20,844 - root - INFO - Finished processing 8GTK...
