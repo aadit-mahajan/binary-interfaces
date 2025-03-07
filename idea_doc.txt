@@ -1,0 +1,13 @@
+idea_doc
+
+get the equations for all the g values 
+
+generate matrix of 1s and 0s (nx16 matrix)
+
+solve x = (A^T A)^-1 A^T b (why should I not try using a ml model here?)
+
+find weights of the structured elements (gives some sort of importance metric on the block)
+
+
+
+
