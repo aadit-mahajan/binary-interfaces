@@ -167,9 +167,9 @@ if __name__ == '__main__':
 
     os.makedirs(pdb_files_dir, exist_ok=True)
 
-    get_all_pdbs(pdb_list, pdb_dir=pdb_files_dir)
+    # get_all_pdbs(pdb_list, pdb_dir=pdb_files_dir)
 
-    print(os.listdir(pdb_files_dir))
+    # print(os.listdir(pdb_files_dir))
 
     elec_files_dir = './elec_intr_files'
     vdw_files_dir = './vdw_intr_files'

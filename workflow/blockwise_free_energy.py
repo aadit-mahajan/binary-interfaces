@@ -60,9 +60,9 @@ def get_block_g_vals(id, min_g_vals_struct_elems, master_matrix_dir):
    return blockwise_g_vals
 
 def save_blockwise_g_vals(blockwise_g_vals, id, output_dir):
-    if not os.path.exists(output_dir):
-        os.makedirs(output_dir)
+   if not os.path.exists(output_dir):
+      os.makedirs(output_dir)
 
-    blockwise_g_vals_df = pd.DataFrame(blockwise_g_vals.items(), columns=['struct_elem', 'g_val'])
-    blockwise_g_vals_df.to_csv(f'{output_dir}/blockwise_g_vals_{id}.csv', index=False)
+   blockwise_g_vals_df = pd.DataFrame(blockwise_g_vals.items(), columns=['struct_elem', 'g_val'])
+   blockwise_g_vals_df.to_csv(f'{output_dir}/blockwise_g_vals_{id}.csv', index=False)
 
