@@ -132,6 +132,7 @@ if __name__ == "__main__":
     pdb_files = os.listdir(pdb_files_dir)
     for pdb_file in pdb_files:
         if pdb_file.endswith('.pdb'):
+            print('Processing:', pdb_file)
             input_path = os.path.join(pdb_files_dir, pdb_file)
             output_path = os.path.join(output_dir, f"{pdb_file}")
             align_protein(input_path, output_path)

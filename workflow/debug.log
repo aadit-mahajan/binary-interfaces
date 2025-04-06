@@ -1981,3 +1981,222 @@ KeyError: 'section'
 2025-04-01 10:07:23,000 - root - INFO - Finished processing 2ypt...
 2025-04-01 10:07:24,473 - root - INFO - Finished processing 2k9y...
 2025-04-01 10:07:24,700 - root - INFO - Finished processing 2lzl...
+06-Apr-25 22:55:08 - Processing pdb: 2l9u.pdb
+06-Apr-25 22:55:08 - Processing pdb: 2k1l.pdb
+06-Apr-25 22:55:08 - Processing pdb: 2kpf.pdb
+06-Apr-25 22:55:08 - Getting electrostatic interactions for pdb file: ./pdb_files/2l9u.pdb
+06-Apr-25 22:55:08 - Processing pdb: 2byb.pdb
+06-Apr-25 22:55:08 - Getting electrostatic interactions for pdb file: ./pdb_files/2k1l.pdb
+06-Apr-25 22:55:08 - Processing pdb: 2k1k.pdb
+06-Apr-25 22:55:08 - Getting electrostatic interactions for pdb file: ./pdb_files/2kpf.pdb
+06-Apr-25 22:55:08 - Processing pdb: 2kpe.pdb
+06-Apr-25 22:55:08 - Processing pdb: 2jwa.pdb
+06-Apr-25 22:55:08 - Processing pdb: 2meu.pdb
+06-Apr-25 22:55:08 - Processing pdb: 2l34.pdb
+06-Apr-25 22:55:08 - Getting electrostatic interactions for pdb file: ./pdb_files/2byb.pdb
+06-Apr-25 22:55:08 - Getting electrostatic interactions for pdb file: ./pdb_files/2k1k.pdb
+06-Apr-25 22:55:08 - Processing pdb: 2l35.pdb
+06-Apr-25 22:55:08 - Processing pdb: 5oc9.pdb
+06-Apr-25 22:55:08 - Getting electrostatic interactions for pdb file: ./pdb_files/2kpe.pdb
+06-Apr-25 22:55:08 - Processing pdb: 2knc.pdb
+06-Apr-25 22:55:08 - Getting electrostatic interactions for pdb file: ./pdb_files/2jwa.pdb
+06-Apr-25 22:55:08 - Getting electrostatic interactions for pdb file: ./pdb_files/2meu.pdb
+06-Apr-25 22:55:08 - Getting electrostatic interactions for pdb file: ./pdb_files/2l34.pdb
+06-Apr-25 22:55:08 - Getting electrostatic interactions for pdb file: ./pdb_files/2l35.pdb
+06-Apr-25 22:55:08 - Getting electrostatic interactions for pdb file: ./pdb_files/5oc9.pdb
+06-Apr-25 22:55:08 - Getting electrostatic interactions for pdb file: ./pdb_files/2knc.pdb
+06-Apr-25 22:55:08 - Electrostatic interactions done.
+06-Apr-25 22:55:08 - Getting Van der Waals interactions for pdb file: ./pdb_files/2kpf.pdb
+06-Apr-25 22:55:08 - Electrostatic interactions done.
+06-Apr-25 22:55:08 - Electrostatic interactions done.
+06-Apr-25 22:55:08 - Getting Van der Waals interactions for pdb file: ./pdb_files/2kpe.pdb
+06-Apr-25 22:55:08 - Electrostatic interactions done.
+06-Apr-25 22:55:08 - Getting Van der Waals interactions for pdb file: ./pdb_files/2k1l.pdb
+06-Apr-25 22:55:08 - Electrostatic interactions done.
+06-Apr-25 22:55:09 - Getting Van der Waals interactions for pdb file: ./pdb_files/2l9u.pdb
+06-Apr-25 22:55:09 - Getting Van der Waals interactions for pdb file: ./pdb_files/2l34.pdb
+06-Apr-25 22:55:09 - Electrostatic interactions done.
+06-Apr-25 22:55:09 - Getting Van der Waals interactions for pdb file: ./pdb_files/2jwa.pdb
+06-Apr-25 22:55:09 - Electrostatic interactions done.
+06-Apr-25 22:55:09 - Electrostatic interactions done.
+06-Apr-25 22:55:09 - Getting Van der Waals interactions for pdb file: ./pdb_files/2knc.pdb
+06-Apr-25 22:55:09 - Electrostatic interactions done.
+06-Apr-25 22:55:09 - Getting Van der Waals interactions for pdb file: ./pdb_files/2l35.pdb
+06-Apr-25 22:55:09 - Electrostatic interactions done.
+06-Apr-25 22:55:09 - Electrostatic interactions done.
+06-Apr-25 22:55:09 - Getting Van der Waals interactions for pdb file: ./pdb_files/2meu.pdb
+06-Apr-25 22:55:09 - Getting Van der Waals interactions for pdb file: ./pdb_files/2k1k.pdb
+06-Apr-25 22:55:09 - Getting Van der Waals interactions for pdb file: ./pdb_files/2byb.pdb
+06-Apr-25 22:55:09 - Electrostatic interactions done.
+06-Apr-25 22:55:09 - Getting Van der Waals interactions for pdb file: ./pdb_files/5oc9.pdb
+06-Apr-25 22:55:09 - Van der Waals interactions done.
+06-Apr-25 22:55:09 - Done processing pdb: 2l34.pdb
+NoneType: None
+06-Apr-25 22:55:09 - Van der Waals interactions done.
+06-Apr-25 22:55:09 - Processing pdb: 2n2a.pdb
+06-Apr-25 22:55:09 - Done processing pdb: 2kpe.pdb
+NoneType: None
+06-Apr-25 22:55:09 - Getting electrostatic interactions for pdb file: ./pdb_files/2n2a.pdb
+06-Apr-25 22:55:09 - Processing pdb: 4mqe.pdb
+06-Apr-25 22:55:09 - Getting electrostatic interactions for pdb file: ./pdb_files/4mqe.pdb
+06-Apr-25 22:55:09 - Van der Waals interactions done.
+06-Apr-25 22:55:09 - Van der Waals interactions done.
+06-Apr-25 22:55:09 - Van der Waals interactions done.
+06-Apr-25 22:55:09 - Done processing pdb: 2kpf.pdb
+NoneType: None
+06-Apr-25 22:55:09 - Done processing pdb: 2l9u.pdb
+NoneType: None
+06-Apr-25 22:55:09 - Processing pdb: 2k9y.pdb
+06-Apr-25 22:55:09 - Done processing pdb: 2k1l.pdb
+NoneType: None
+06-Apr-25 22:55:09 - Processing pdb: 2ypt.pdb
+06-Apr-25 22:55:09 - Getting electrostatic interactions for pdb file: ./pdb_files/2k9y.pdb
+06-Apr-25 22:55:09 - Processing pdb: 6dmy.pdb
+06-Apr-25 22:55:09 - Van der Waals interactions done.
+06-Apr-25 22:55:10 - Getting electrostatic interactions for pdb file: ./pdb_files/2ypt.pdb
+06-Apr-25 22:55:10 - Getting electrostatic interactions for pdb file: ./pdb_files/6dmy.pdb
+06-Apr-25 22:55:10 - Done processing pdb: 2jwa.pdb
+NoneType: None
+06-Apr-25 22:55:10 - Van der Waals interactions done.
+06-Apr-25 22:55:10 - Processing pdb: 6xiw.pdb
+06-Apr-25 22:55:10 - Done processing pdb: 2k1k.pdb
+NoneType: None
+06-Apr-25 22:55:10 - Van der Waals interactions done.
+06-Apr-25 22:55:10 - Van der Waals interactions done.
+06-Apr-25 22:55:10 - Processing pdb: 2m59.pdb
+06-Apr-25 22:55:10 - Getting electrostatic interactions for pdb file: ./pdb_files/6xiw.pdb
+06-Apr-25 22:55:10 - Done processing pdb: 2knc.pdb
+NoneType: None
+06-Apr-25 22:55:10 - Done processing pdb: 2meu.pdb
+NoneType: None
+06-Apr-25 22:55:10 - Getting electrostatic interactions for pdb file: ./pdb_files/2m59.pdb
+06-Apr-25 22:55:10 - Van der Waals interactions done.
+06-Apr-25 22:55:10 - Processing pdb: 2hac.pdb
+06-Apr-25 22:55:10 - Processing pdb: 2lcx.pdb
+06-Apr-25 22:55:10 - Done processing pdb: 2l35.pdb
+NoneType: None
+06-Apr-25 22:55:10 - Getting electrostatic interactions for pdb file: ./pdb_files/2hac.pdb
+06-Apr-25 22:55:10 - Getting electrostatic interactions for pdb file: ./pdb_files/2lcx.pdb
+06-Apr-25 22:55:10 - Electrostatic interactions done.
+06-Apr-25 22:55:10 - Processing pdb: 2lzl.pdb
+06-Apr-25 22:55:10 - Getting Van der Waals interactions for pdb file: ./pdb_files/2n2a.pdb
+06-Apr-25 22:55:10 - Getting electrostatic interactions for pdb file: ./pdb_files/2lzl.pdb
+06-Apr-25 22:55:10 - Electrostatic interactions done.
+06-Apr-25 22:55:10 - Getting Van der Waals interactions for pdb file: ./pdb_files/4mqe.pdb
+06-Apr-25 22:55:10 - Electrostatic interactions done.
+06-Apr-25 22:55:10 - Getting Van der Waals interactions for pdb file: ./pdb_files/2k9y.pdb
+06-Apr-25 22:55:10 - Electrostatic interactions done.
+06-Apr-25 22:55:10 - Getting Van der Waals interactions for pdb file: ./pdb_files/2m59.pdb
+06-Apr-25 22:55:11 - Van der Waals interactions done.
+06-Apr-25 22:55:11 - Done processing pdb: 5oc9.pdb
+NoneType: None
+06-Apr-25 22:55:11 - Processing pdb: 2ks1.pdb
+06-Apr-25 22:55:11 - Getting electrostatic interactions for pdb file: ./pdb_files/2ks1.pdb
+06-Apr-25 22:55:11 - Electrostatic interactions done.
+06-Apr-25 22:55:11 - Getting Van der Waals interactions for pdb file: ./pdb_files/6dmy.pdb
+06-Apr-25 22:55:11 - Van der Waals interactions done.
+06-Apr-25 22:55:11 - Done processing pdb: 2byb.pdb
+NoneType: None
+06-Apr-25 22:55:11 - Electrostatic interactions done.
+06-Apr-25 22:55:11 - Electrostatic interactions done.
+06-Apr-25 22:55:11 - Electrostatic interactions done.
+06-Apr-25 22:55:11 - Getting Van der Waals interactions for pdb file: ./pdb_files/2lzl.pdb
+06-Apr-25 22:55:11 - Getting Van der Waals interactions for pdb file: ./pdb_files/2lcx.pdb
+06-Apr-25 22:55:11 - Getting Van der Waals interactions for pdb file: ./pdb_files/2ypt.pdb
+06-Apr-25 22:55:11 - Electrostatic interactions done.
+06-Apr-25 22:55:11 - Getting Van der Waals interactions for pdb file: ./pdb_files/2hac.pdb
+06-Apr-25 22:55:11 - Electrostatic interactions done.
+06-Apr-25 22:55:11 - Getting Van der Waals interactions for pdb file: ./pdb_files/6xiw.pdb
+06-Apr-25 22:55:11 - Van der Waals interactions done.
+06-Apr-25 22:55:11 - Done processing pdb: 2n2a.pdb
+NoneType: None
+06-Apr-25 22:55:12 - Van der Waals interactions done.
+06-Apr-25 22:55:12 - Done processing pdb: 2k9y.pdb
+NoneType: None
+06-Apr-25 22:55:12 - Van der Waals interactions done.
+06-Apr-25 22:55:12 - Done processing pdb: 2m59.pdb
+NoneType: None
+06-Apr-25 22:55:12 - Electrostatic interactions done.
+06-Apr-25 22:55:12 - Getting Van der Waals interactions for pdb file: ./pdb_files/2ks1.pdb
+06-Apr-25 22:55:12 - Van der Waals interactions done.
+06-Apr-25 22:55:12 - Done processing pdb: 2lcx.pdb
+NoneType: None
+06-Apr-25 22:55:12 - Van der Waals interactions done.
+06-Apr-25 22:55:12 - Done processing pdb: 2lzl.pdb
+NoneType: None
+06-Apr-25 22:55:12 - Van der Waals interactions done.
+06-Apr-25 22:55:12 - Done processing pdb: 2hac.pdb
+NoneType: None
+06-Apr-25 22:55:12 - Van der Waals interactions done.
+06-Apr-25 22:55:12 - Van der Waals interactions done.
+06-Apr-25 22:55:12 - Done processing pdb: 2ks1.pdb
+NoneType: None
+06-Apr-25 22:55:12 - Done processing pdb: 4mqe.pdb
+NoneType: None
+06-Apr-25 22:55:12 - Van der Waals interactions done.
+06-Apr-25 22:55:12 - Done processing pdb: 6dmy.pdb
+NoneType: None
+06-Apr-25 22:55:13 - Van der Waals interactions done.
+06-Apr-25 22:55:13 - Done processing pdb: 2ypt.pdb
+NoneType: None
+06-Apr-25 22:55:13 - Van der Waals interactions done.
+06-Apr-25 22:55:13 - Done processing pdb: 6xiw.pdb
+NoneType: None
+2025-04-06 22:55:13,706 - root - INFO - Processing 2l9u...
+2025-04-06 22:55:13,706 - root - INFO - Processing 2k1l...
+2025-04-06 22:55:13,706 - root - INFO - Processing 2kpf...
+2025-04-06 22:55:13,706 - root - INFO - Processing 2byb...
+2025-04-06 22:55:13,707 - root - INFO - Processing 2k1k...
+2025-04-06 22:55:13,707 - root - INFO - Processing 2kpe...
+2025-04-06 22:55:13,708 - root - INFO - Processing 2jwa...
+2025-04-06 22:55:13,708 - root - INFO - Processing 2meu...
+2025-04-06 22:55:13,711 - root - INFO - Processing 2l34...
+2025-04-06 22:55:13,713 - root - INFO - Processing 2l35...
+2025-04-06 22:55:13,713 - root - INFO - Processing 5oc9...
+2025-04-06 22:55:13,719 - root - INFO - Processing 2knc...
+2025-04-06 22:56:01,995 - root - INFO - Finished processing 2kpe...
+2025-04-06 22:56:02,150 - root - INFO - Processing 2n2a...
+2025-04-06 22:56:12,984 - root - INFO - Finished processing 2k1l...
+2025-04-06 22:56:13,031 - root - INFO - Processing 4mqe...
+2025-04-06 22:56:13,681 - root - INFO - Finished processing 2l9u...
+2025-04-06 22:56:13,682 - root - INFO - Processing 2k9y...
+2025-04-06 22:56:15,147 - root - INFO - Finished processing 2l35...
+2025-04-06 22:56:15,189 - root - INFO - Processing 2ypt...
+2025-04-06 22:56:15,255 - root - INFO - Finished processing 2k1k...
+2025-04-06 22:56:15,263 - root - INFO - Processing 6dmy...
+2025-04-06 22:56:15,884 - root - INFO - Finished processing 2byb...
+2025-04-06 22:56:15,897 - root - INFO - Processing 6xiw...
+2025-04-06 22:56:15,914 - root - INFO - Finished processing 2jwa...
+2025-04-06 22:56:16,014 - root - INFO - Processing 2m59...
+2025-04-06 22:56:16,247 - root - INFO - Finished processing 2meu...
+2025-04-06 22:56:16,253 - root - INFO - Processing 2hac...
+2025-04-06 22:56:17,874 - root - INFO - Finished processing 2l34...
+2025-04-06 22:56:17,903 - root - INFO - Processing 2lcx...
+2025-04-06 22:56:18,184 - root - ERROR - Error processing 2lcx: 'section'
+Traceback (most recent call last):
+  File "/Users/aaditmahajan/Documents/binary-interfaces/workflow/free_energy.py", line 253, in process_pdb_files
+    fin_master_matrix = get_sw_values(master_matrix, elec_intr, vdw_intr, temp)
+  File "/Users/aaditmahajan/Documents/binary-interfaces/workflow/free_energy.py", line 162, in get_sw_values
+    elec_intr_sec_grp = elec_intr.groupby('section')
+  File "/Users/aaditmahajan/.pyenv/versions/anaconda3-2022.10/lib/python3.9/site-packages/pandas/core/frame.py", line 7721, in groupby
+    return DataFrameGroupBy(
+  File "/Users/aaditmahajan/.pyenv/versions/anaconda3-2022.10/lib/python3.9/site-packages/pandas/core/groupby/groupby.py", line 882, in __init__
+    grouper, exclusions, obj = get_grouper(
+  File "/Users/aaditmahajan/.pyenv/versions/anaconda3-2022.10/lib/python3.9/site-packages/pandas/core/groupby/grouper.py", line 882, in get_grouper
+    raise KeyError(gpr)
+KeyError: 'section'
+2025-04-06 22:56:18,213 - root - INFO - Finished processing 2knc...
+2025-04-06 22:56:18,541 - root - INFO - Finished processing 5oc9...
+2025-04-06 22:56:19,019 - root - INFO - Processing 2lzl...
+2025-04-06 22:56:19,028 - root - INFO - Processing 2ks1...
+2025-04-06 22:56:21,009 - root - INFO - Finished processing 2kpf...
+2025-04-06 22:56:57,273 - root - INFO - Finished processing 2n2a...
+2025-04-06 22:57:03,134 - root - INFO - Finished processing 4mqe...
+2025-04-06 22:57:06,941 - root - INFO - Finished processing 6dmy...
+2025-04-06 22:57:08,556 - root - INFO - Finished processing 2lzl...
+2025-04-06 22:57:10,785 - root - INFO - Finished processing 2m59...
+2025-04-06 22:57:10,957 - root - INFO - Finished processing 2ks1...
+2025-04-06 22:57:11,373 - root - INFO - Finished processing 2ypt...
+2025-04-06 22:57:11,665 - root - INFO - Finished processing 2hac...
+2025-04-06 22:57:12,011 - root - INFO - Finished processing 6xiw...
+2025-04-06 22:57:12,024 - root - INFO - Finished processing 2k9y...

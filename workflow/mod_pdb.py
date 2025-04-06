@@ -6,9 +6,6 @@ import pandas as pd
 import os 
 import matplotlib.pyplot as plt
 import json
-import warnings
-
-warnings.filterwarnings("ignore")
 
 def generate_z_planes(interchain_intr, N_PLANES) -> list[float]:
     z_values = []
@@ -17,7 +14,8 @@ def generate_z_planes(interchain_intr, N_PLANES) -> list[float]:
         z_values.append(interchain_intr.atom2_zcoord.iloc[i])
 
     z_values = np.array(z_values)
-    z_planes = list(np.linspace(z_values.min(), z_values.max(), N_PLANES))
+    buffer = 1e-3
+    z_planes = list(np.linspace(z_values.min() - buffer, z_values.max() + buffer, N_PLANES))
     z_planes.sort()
     return z_planes
 
@@ -79,6 +77,11 @@ def plot_min_g_vals_ms_hist(min_g_vals_groups, pdb_id, output_dir = './plots/min
     plt.close()
 
 def get_se_freq_stable(min_g_vals_groups):
+    '''
+    se_freq_stable_df -> ms with highest frequency 
+    se_freq_stable_cond_df -> ms with energy < (mean-std)
+    '''
+
     total_entries = min_g_vals_groups.reset_index()
     mean_g_part_total = total_entries.g_part.mean()
     std_g_part_total = total_entries.g_part.std()
@@ -121,8 +124,7 @@ def get_se_freq_stable(min_g_vals_groups):
 
     return se_freq_stable_df, se_freq_stable_cond_df
 
-
-def mod_bfac_to_ms_freq(se_freq_stable_df, se_freq_stable_cond_df, pdb_file_dir, id, z_planes, output_dir = './plots/se_freq_stable'):
+def mod_bfac_to_ms_freq(se_freq_stable_df, se_freq_stable_cond_df, pdb_file_dir, id, z_planes, output_dir='./plots/se_freq_stable'):
     os.makedirs(output_dir, exist_ok=True)
     counts = se_freq_stable_df.sum(axis=1)
     counts_cond = se_freq_stable_cond_df.sum(axis=1)
@@ -136,26 +138,59 @@ def mod_bfac_to_ms_freq(se_freq_stable_df, se_freq_stable_cond_df, pdb_file_dir,
     plt.savefig(os.path.join(output_dir, f'{id}_se_freq_stable.png'))
     plt.close()
 
+    elec_intr = pd.read_csv(f'./elec_intr_files/elec_intr_{id}.csv')
+    vdw_intr = pd.read_csv(f'./vdw_intr_files/vdw_intr_{id}.csv')
+    residue_list = list(set(elec_intr.atom1_resnum.tolist() + elec_intr.atom2_resnum.tolist() + 
+                           vdw_intr.atom1_resnum.tolist() + vdw_intr.atom2_resnum.tolist()))
+    print('residue list:', residue_list)
+    
     pdb = pandaspdb()
     pdb.read_pdb(f'{pdb_file_dir}/{id}.pdb')
 
     pdb_df = pdb.df['ATOM']
-    sections = []
+    print(pdb_df.head())
+    
+    # Create a dictionary to map residue numbers to their b-factor values
+    residue_to_bfactor = {}
+    
+    # Process only residues in the residue list
     for i in range(len(pdb_df)):
-        z = pdb_df.z_coord.iloc[i]
-        section = np.digitize(z, z_planes)
-        sections.append(section)
-
-    temp = []
-    for section in sections:
-        temp.append(counts[section])
-
-    # scale the b-factor values to the range of 0-99 (to stay within the range of b-factor values)
-    temp = np.array(temp)
-    temp = (temp - temp.min()) / (temp.max() - temp.min()) * 99
-    temp = temp.astype(int)
-    pdb_df.b_factor = temp
+        if pdb_df.iloc[i].residue_number in residue_list:
+            z = pdb_df.z_coord.iloc[i]
+            section = np.digitize(z, z_planes)
+            
+            # Get the count for this section
+            count_value = counts[section]
+            
+            # Store the section's count value for this residue
+            if pdb_df.iloc[i].residue_number not in residue_to_bfactor:
+                residue_to_bfactor[pdb_df.iloc[i].residue_number] = count_value
+    
+    # Scale the b-factor values to the range of 0-99
+    if residue_to_bfactor:  # Check if dictionary is not empty
+        min_val = min(residue_to_bfactor.values())
+        max_val = max(residue_to_bfactor.values())
+        
+        # Avoid division by zero if all values are the same
+        if max_val != min_val:
+            for res_num in residue_to_bfactor:
+                residue_to_bfactor[res_num] = int(((residue_to_bfactor[res_num] - min_val) / 
+                                                 (max_val - min_val)) * 99)
+        else:
+            # If all values are the same, set them to a middle value like 50
+            for res_num in residue_to_bfactor:
+                residue_to_bfactor[res_num] = 50
+    
+    # Assign b-factor values only to residues in the residue list
+    for i in range(len(pdb_df)):
+        res_num = pdb_df.iloc[i].residue_number
+        if res_num in residue_to_bfactor:
+            pdb_df.at[i, 'b_factor'] = residue_to_bfactor[res_num]
+        else:
+            pdb_df.at[i, 'b_factor'] = 0  # Set b-factor to 0 for residues not in the list
+    
     pdb.to_pdb(path=f'../mod_pdb_files/{id}_se_freq_stable.pdb', records=['ATOM'])
+
 
 if __name__ == '__main__':
 
@@ -188,6 +223,7 @@ if __name__ == '__main__':
             min_g_val_struct_elems, min_g_vals_groups = get_min_g_val_se(master_matrix, g_vecs)
             min_g_val_group_z_total = min_g_vals_groups.sw_part.sum()
 
+            min_g_vals_groups = min_g_vals_groups.copy()
             min_g_vals_groups.loc[:, 'partial_z'] = min_g_vals_groups['sw_part'] / min_g_val_group_z_total
             min_g_vals_groups.loc[:, 'g_part'] = min_g_vals_groups['partial_z'].apply(lambda x: -R * 298 * np.log(x) if x > 0 else np.nan)
 
