@@ -1,5 +1,5 @@
 # 
-
+from tqdm import tqdm
 from biopandas.pdb import PandasPdb as pandaspdb
 import numpy as np
 import pandas as pd 
@@ -148,7 +148,6 @@ def mod_bfac_to_ms_freq(se_freq_stable_df, se_freq_stable_cond_df, pdb_file_dir,
     pdb.read_pdb(f'{pdb_file_dir}/{id}.pdb')
 
     pdb_df = pdb.df['ATOM']
-    print(pdb_df.head())
     
     # Create a dictionary to map residue numbers to their b-factor values
     residue_to_bfactor = {}
@@ -174,6 +173,71 @@ def mod_bfac_to_ms_freq(se_freq_stable_df, se_freq_stable_cond_df, pdb_file_dir,
         # Avoid division by zero if all values are the same
         if max_val != min_val:
             for res_num in residue_to_bfactor:
+                residue_to_bfactor[res_num] = 100 - int(((residue_to_bfactor[res_num] - min_val) / 
+                                                 (max_val - min_val)) * 99)
+        else:
+            # If all values are the same, set them to a middle value like 50
+            for res_num in residue_to_bfactor:
+                residue_to_bfactor[res_num] = 50
+    
+    # Assign b-factor values only to residues in the residue list
+    for i in range(len(pdb_df)):
+        res_num = pdb_df.iloc[i].residue_number
+        if res_num in residue_to_bfactor:
+            pdb_df.at[i, 'b_factor'] = residue_to_bfactor[res_num]
+        else:
+            # color the two chains differently
+            if pdb_df.iloc[i].chain_id == 'A':
+                pdb_df.at[i, 'b_factor'] = 40
+            elif pdb_df.iloc[i].chain_id == 'B':
+                pdb_df.at[i, 'b_factor'] = 60
+    
+    pdb.to_pdb(path=f'../mod_pdb_files/{id}_se_freq_stable.pdb', records=['ATOM'])
+
+def mod_bfac_to_blockwise_FE(id, pdb_file_dir, blockwise_g_vecs_dir):
+    output_dir = '../mod_pdb_files'
+    os.makedirs(output_dir, exist_ok=True)
+
+    file_path = os.path.join(blockwise_g_vecs_dir, f'blockwise_g_vals_{id}.csv')
+    blockwise_g_vecs = pd.read_csv(file_path)
+    block_g_vals = blockwise_g_vecs.iloc[:, 1].values
+    block_g_vals = block_g_vals.astype(float)
+
+    elec_intr = pd.read_csv(f'./elec_intr_files/elec_intr_{id}.csv')
+    vdw_intr = pd.read_csv(f'./vdw_intr_files/vdw_intr_{id}.csv')
+    residue_list = list(set(elec_intr.atom1_resnum.tolist() + elec_intr.atom2_resnum.tolist() + 
+                           vdw_intr.atom1_resnum.tolist() + vdw_intr.atom2_resnum.tolist()))
+    print('residue list:', residue_list)
+    
+    pdb = pandaspdb()
+    pdb.read_pdb(f'{pdb_file_dir}/{id}.pdb')
+
+    pdb_df = pdb.df['ATOM']
+    
+    # Create a dictionary to map residue numbers to their b-factor values
+    residue_to_bfactor = {}
+    
+    # Process only residues in the residue list
+    for i in range(len(pdb_df)):
+        if pdb_df.iloc[i].residue_number in residue_list:
+            z = pdb_df.z_coord.iloc[i]
+            section = np.digitize(z, z_planes)
+            
+            # Get the count for this section
+            count_value = block_g_vals[section]
+            
+            # Store the section's count value for this residue
+            if pdb_df.iloc[i].residue_number not in residue_to_bfactor:
+                residue_to_bfactor[pdb_df.iloc[i].residue_number] = count_value
+    
+    # Scale the b-factor values to the range of 50-99
+    if residue_to_bfactor:  # Check if dictionary is not empty
+        min_val = min(residue_to_bfactor.values())
+        max_val = max(residue_to_bfactor.values())
+        
+        # Avoid division by zero if all values are the same
+        if max_val != min_val:
+            for res_num in residue_to_bfactor:
                 residue_to_bfactor[res_num] = int(((residue_to_bfactor[res_num] - min_val) / 
                                                  (max_val - min_val)) * 99)
         else:
@@ -187,9 +251,13 @@ def mod_bfac_to_ms_freq(se_freq_stable_df, se_freq_stable_cond_df, pdb_file_dir,
         if res_num in residue_to_bfactor:
             pdb_df.at[i, 'b_factor'] = residue_to_bfactor[res_num]
         else:
-            pdb_df.at[i, 'b_factor'] = 0  # Set b-factor to 0 for residues not in the list
+            # color the two chains differently
+            if pdb_df.iloc[i].chain_id == 'A':
+                pdb_df.at[i, 'b_factor'] = 40
+            elif pdb_df.iloc[i].chain_id == 'B':
+                pdb_df.at[i, 'b_factor'] = 60
     
-    pdb.to_pdb(path=f'../mod_pdb_files/{id}_se_freq_stable.pdb', records=['ATOM'])
+    pdb.to_pdb(path=f'../mod_pdb_files/{id}_block_fe.pdb', records=['ATOM'])
 
 
 if __name__ == '__main__':
@@ -205,9 +273,10 @@ if __name__ == '__main__':
     g_vecs_dir = './g_vecs'
     pdb_file_dir = './pdb_files'
     interchain_intr_dir = './elec_intr_files'
+    blockwise_g_vecs_dir = './analysis_output/blockwise_g_vals'
     vdw_intr_dir = './vdw_intr_files'
 
-    for pdb_file in os.listdir(pdb_file_dir):
+    for pdb_file in tqdm(os.listdir(pdb_file_dir), desc='Processing PDB files'):
         pdb = pdb_file.split('.')[0]
 
         try:
@@ -236,9 +305,13 @@ if __name__ == '__main__':
                                 id=pdb, 
                                 z_planes=z_planes)
             
+            mod_bfac_to_blockwise_FE(id=pdb, 
+                                   pdb_file_dir=pdb_file_dir, 
+                                   blockwise_g_vecs_dir=blockwise_g_vecs_dir)
+            
             plot_min_g_vals_ms_hist(min_g_vals_groups, pdb)
 
-            print(f'{pdb} done')
+            # print(f'{pdb} done')
         except Exception as e:
             print(f'Error in {pdb}: {e}')
             continue

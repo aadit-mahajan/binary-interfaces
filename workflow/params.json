@@ -4,7 +4,7 @@
     "T_REF":        385,
     "MIN_TEMP":     300,
     "MAX_TEMP":     350,
-    "TEMP_STEP":    5,
+    "TEMP_STEP":    10,
     "R":            0.008314,
     "IS":           0.043,
     "DIELEC_CYTO":  29,

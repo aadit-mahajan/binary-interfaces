@@ -134,6 +134,17 @@ def calculate_partial_deltaG(master_matrix, min_energy_struct_elem, temp) -> pd.
 
     return min_g_vals_groups
 
+def block_is_folded(block, row):
+    '''
+    Check if the block is folded or not
+    '''
+    if row['start1'] <= block <= row['end1']:
+        return True
+    elif row['type'] == 2 and row['start2'] <= block <= row['end2']:
+        return True
+    else:
+        return False
+    
 def get_block_g_vals(id, min_g_vals_struct_elem, output_dir):
     master_matrix = pd.read_csv(f'{master_matrices_dir}/{id}_master_matrix.csv')
     min_FE_macrostate = min_g_vals_struct_elem
@@ -142,27 +153,26 @@ def get_block_g_vals(id, min_g_vals_struct_elem, output_dir):
     TEMP = 300
     R = 8.314/1000
     
-    blockwise_sw = defaultdict(float)
-    total_sw = 0
-
+    blockwise_total = defaultdict(float)
+    log_total = 0
+    # print(total)
     for _, row in min_FE_group.iterrows():
-        sw_part = row['sw_part']
-        total_sw += sw_part
-
+        log_total += row['sw_part']
         ranges = [(row['start1'], row['end1'])]
         if row['type'] == 2:
             ranges.append((row['start2'], row['end2']))
 
         for start, end in ranges:
             for i in range(int(start), int(end) + 1):
-                blockwise_sw[i] += sw_part
+                blockwise_total[i] += row['sw_part']
 
-    log_total_sw = np.log(total_sw)
+    # print(blockwise_total)
+    total = sum(master_matrix['sw_part'])
+
     blockwise_g_vals = {
-        i: -R * TEMP * (np.log(sw) - log_total_sw)
-        for i, sw in blockwise_sw.items()
+        i: -R * TEMP * np.log(w / total)
+        for i, w in blockwise_total.items()
     }
-
     blockwise_g_vals = dict(sorted(blockwise_g_vals.items()))
     blockwise_g_vals = pd.DataFrame.from_dict(blockwise_g_vals, orient='index', columns=['g_val'])
     blockwise_g_vals.to_csv(f'{output_dir}/blockwise_g_vals_{id}.csv', index_label='block')

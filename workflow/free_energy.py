@@ -209,7 +209,7 @@ if __name__ == '__main__':
     max_temp = params['MAX_TEMP']
     temp_step = params['TEMP_STEP']
     R = params['R']
-    DIELEC = params['DIELEC_TM']          # change this to DIELEC_CYTO if working with cytosolic proteins. 
+    DIELEC = params['DIELEC_CYTO']          # change this to DIELEC_CYTO if working with cytosolic proteins. 
     N_PLANES = params['N_PLANES']
 
     elec_intr_files = get_elec_intr_filepaths(elec_intr_dir) 

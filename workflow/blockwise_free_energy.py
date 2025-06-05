@@ -15,6 +15,8 @@ def get_block_g_vals(id, min_g_vals_struct_elems, master_matrix_dir):
    total_sw = 0
    TEMP = 300
    R = 8.314/1000
+   total_sw = min_FE_group['sw_part'].sum()
+   print(f'Total SW: {total_sw}')
 
    for i in range(len(min_FE_group)):
       row = min_FE_group.iloc[i]
@@ -54,6 +56,8 @@ def get_block_g_vals(id, min_g_vals_struct_elems, master_matrix_dir):
 
    blockwise_g_vals = {}
    for i in blockwise_sw.keys():
+      probability = blockwise_sw[i] / total_sw
+      print(f'Probability: {probability}')
       blockwise_g_vals[i] = -R*TEMP*math.log(blockwise_sw[i] / total_sw)
    
    blockwise_g_vals = dict(sorted(blockwise_g_vals.items(), key = lambda x: x[0]))
