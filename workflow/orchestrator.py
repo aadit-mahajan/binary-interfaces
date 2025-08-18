@@ -1,5 +1,6 @@
 import os 
 import subprocess
+import time
 
 # 1. contact_calc
 # 2. free_energy
@@ -8,6 +9,7 @@ import subprocess
 # 5. mod pdb
 
 if __name__ == "__main__":
+    t1 = time.time()
     # Define the directory containing the scripts
     script_dir = os.path.dirname(os.path.abspath(__file__))
 
@@ -33,8 +35,20 @@ if __name__ == "__main__":
         "mod_pdb.py"
     ]
 
+    # scripts = [
+    #     "pdb_aligner.py",
+    #     "contact_calc.py",
+    #     "free_energy_total.py",
+    #     "intr_analysis_total.py",
+    #     "plot_utils.py",
+    #     "mod_pdb_total.py"
+    # ]
+
     # Run each script
     for script in scripts:
         script_path = os.path.join(script_dir, script)
         print(f"--------------------\nRunning {script}...\n--------------------\n")
         subprocess.run(["python3", script_path], check=True)
+
+    t2 = time.time()
+    print("Performance: {:.2f} seconds".format(t2 - t1))
