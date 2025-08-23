@@ -44,11 +44,15 @@ def get_struct_elem_list(master_matrix) -> list:
         end1 = int(master_matrix.iloc[i].end1)
         start2 = int(master_matrix.iloc[i].start2)
         end2 = int(master_matrix.iloc[i].end2)
+        start3 = int(master_matrix.iloc[i].start3)
+        end3 = int(master_matrix.iloc[i].end3)
         comb_type = master_matrix.iloc[i].type
         if comb_type == 1:
             elems_in_comb = list(range(start1, end1))
         elif comb_type == 2:
             elems_in_comb = list(range(start1, end1)) + list(range(start2, end2))
+        elif comb_type == 3:
+            elems_in_comb = list(range(start1, end1)) + list(range(start2, end2)) + list(range(start3, end3))
         struct_elem_list.append(elems_in_comb)
 
     return struct_elem_list
@@ -207,51 +211,60 @@ def mod_bfac_to_blockwise_FE(id, pdb_file_dir, blockwise_g_vecs_dir):
     vdw_intr = pd.read_csv(f'./vdw_intr_files/vdw_intr_{id}.csv')
     residue_list = list(set(elec_intr.atom1_resnum.tolist() + elec_intr.atom2_resnum.tolist() + 
                            vdw_intr.atom1_resnum.tolist() + vdw_intr.atom2_resnum.tolist()))
-    print('residue list:', residue_list)
-    
+    print(f'residue list for id {id}:', residue_list)
+
     pdb = pandaspdb()
     pdb.read_pdb(f'{pdb_file_dir}/{id}.pdb')
 
     pdb_df = pdb.df['ATOM']
     
     # Create a dictionary to map residue numbers to their b-factor values
+    # Create a dictionary to map (chain_id, residue_number) → b-factor
     residue_to_bfactor = {}
-    
-    # Process only residues in the residue list
+
+    # Create mapping of (chain_id, residue_number) to sections
+    res_to_section = {}
+
+    # From electrostatic interactions
+    for _, row in elec_intr.iterrows():
+        res_to_section[(row['chain1'], row['atom1_resnum'])] = row['section']
+        res_to_section[(row['chain2'], row['atom2_resnum'])] = row['section']
+
+    # From van der Waals interactions
+    for _, row in vdw_intr.iterrows():
+        res_to_section[(row['chain1'], row['atom1_resnum'])] = row['section']
+        res_to_section[(row['chain2'], row['atom2_resnum'])] = row['section']
+
+    # Map sections to b-factors
     for i in range(len(pdb_df)):
-        if pdb_df.iloc[i].residue_number in residue_list:
-            z = pdb_df.z_coord.iloc[i]
-            section = np.digitize(z, z_planes)
-            
-            # Get the count for this section
+        res_key = (pdb_df.iloc[i].chain_id, pdb_df.iloc[i].residue_number)
+        if res_key in res_to_section:
+            section = res_to_section[res_key]
             count_value = block_g_vals[section]
-            
-            # Store the section's count value for this residue
-            if pdb_df.iloc[i].residue_number not in residue_to_bfactor:
-                residue_to_bfactor[pdb_df.iloc[i].residue_number] = count_value
-    
-    # Scale the b-factor values to the range of 50-99
-    if residue_to_bfactor:  # Check if dictionary is not empty
+            if res_key not in residue_to_bfactor:
+                residue_to_bfactor[res_key] = count_value
+
+    # Scale to 0–99
+    if residue_to_bfactor:
         min_val = min(residue_to_bfactor.values())
         max_val = max(residue_to_bfactor.values())
-        
-        # Avoid division by zero if all values are the same
         if max_val != min_val:
-            for res_num in residue_to_bfactor:
-                residue_to_bfactor[res_num] = int(((residue_to_bfactor[res_num] - min_val) / 
-                                                 (max_val - min_val)) * 99)
+            for res_key in residue_to_bfactor:
+                residue_to_bfactor[res_key] = int(
+                    ((residue_to_bfactor[res_key] - min_val) /
+                    (max_val - min_val)) * 99
+                )
         else:
-            # If all values are the same, set them to a middle value like 50
-            for res_num in residue_to_bfactor:
-                residue_to_bfactor[res_num] = 50
-    
-    # Assign b-factor values only to residues in the residue list
+            for res_key in residue_to_bfactor:
+                residue_to_bfactor[res_key] = 50
+
+    # Assign b-factors to ATOM records
     for i in range(len(pdb_df)):
-        res_num = pdb_df.iloc[i].residue_number
-        if res_num in residue_to_bfactor:
-            pdb_df.at[i, 'b_factor'] = residue_to_bfactor[res_num]
+        res_key = (pdb_df.iloc[i].chain_id, pdb_df.iloc[i].residue_number)
+        if res_key in residue_to_bfactor:
+            pdb_df.at[i, 'b_factor'] = residue_to_bfactor[res_key]
         else:
-            # color the two chains differently
+            # Fallback coloring to distinguish chains
             if pdb_df.iloc[i].chain_id == 'A':
                 pdb_df.at[i, 'b_factor'] = 40
             elif pdb_df.iloc[i].chain_id == 'B':

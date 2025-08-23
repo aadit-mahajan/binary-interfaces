@@ -1,288 +1,192 @@
+import os
+import json
 import numpy as np
 import pandas as pd
-import os
-from free_energy import generate_z_planes
-import json
-import matplotlib.pyplot as plt
 from collections import defaultdict
 
-def load_params(param_file_path):
-    with open(param_file_path, 'r') as f:
-        params = json.load(f)
-    return params
+def load_params(param_file_path: str) -> dict:
+    with open(param_file_path, "r") as f:
+        return json.load(f)
 
-def get_intr_sections(interactions, section_boundaries) -> pd.DataFrame:
-    
-    # generate partitions
-    part_1 = pd.cut(interactions['atom1_zcoord'], bins=section_boundaries, labels=False)
-    part_2 = pd.cut(interactions['atom2_zcoord'], bins=section_boundaries, labels=False)
+def ensure_dirs(dirs: list[str]) -> None:
+    for d in dirs:
+        os.makedirs(d, exist_ok=True)
 
-    # handle nan values 
-    part_1 = part_1.fillna(-1)
-    part_2 = part_2.fillna(-1)
-
-    # assign section number to the atoms if both atoms are in the same section
-    for i in range(len(interactions)):
-        p1 = int(part_1.iloc[i])
-        p2 = int(part_2.iloc[i])
-
-        # if p1 == p2, assign the section number to both atoms, else push to section of atom2
-        if p1 == p2:
-            interactions.at[i, 'section'] = p1
-        else:
-            interactions.at[i, 'section'] = p2
-    
+def get_intr_sections(interactions: pd.DataFrame, section_boundaries: list[float]) -> pd.DataFrame:
+    """
+    Assign z-section numbers to interactions.
+    """
+    p1 = pd.cut(interactions["atom1_zcoord"], bins=section_boundaries, labels=False).fillna(-1).astype(int)
+    p2 = pd.cut(interactions["atom2_zcoord"], bins=section_boundaries, labels=False).fillna(-1).astype(int)
+    interactions["section"] = np.where(p1 == p2, p1, p2)
     return interactions
 
-def calc_min_g_struct_elem(g_vecs):
-
-    # get the structured elements with minimum free energy values
-    min_g_vals = g_vecs.min(axis='index')
-    # print(min_g_vals)
-
-    # for each temperature, get the no of structured elements with minimum free energy values
-    min_g_vals_struct_elems = []
+# Free energy calculations
+def calc_min_g_struct_elem(g_vecs: pd.DataFrame) -> list[int]:
+    """
+    Return structured elements with minimum free energy values.
+    """
+    min_g_vals = g_vecs.min(axis="index")
+    elems = []
     for temp in g_vecs.columns:
-        min_g = min_g_vals[temp]
-        min_g_vals_struct_elems += (g_vecs[temp].index[g_vecs[temp] == min_g].tolist())
+        min_val = min_g_vals[temp]
+        elems.extend(g_vecs[temp].index[g_vecs[temp] == min_val].tolist())
+    return list(set(elems))
 
-    min_g_vals_struct_elems = list(set(min_g_vals_struct_elems))
-    return min_g_vals_struct_elems
+def get_min_g_val_groups(master_matrix: pd.DataFrame, struct_elem: int) -> pd.DataFrame:
+    """
+    Return the group of rows for a minimum energy structured element.
+    """
+    return master_matrix.groupby("struct_elem").get_group(struct_elem)
 
-def get_min_g_val_groups(master_matrix, min_g_vals_struct_elem):
-    struct_group = master_matrix.groupby('struct_elem')
-    return struct_group.get_group(min_g_vals_struct_elem)
-
-def frequency_dict(min_g_vals_group, z_planes):
-    '''
-    Finding the occurrence of each interacting block in the groups with minimum free energy values
-    This will give a good idea of the favourably interacting blocks. 
-    '''
-    
+def frequency_dict(min_g_vals_group: pd.DataFrame, n_planes: int) -> dict[int, int]:
+    """
+    Count frequency of interacting blocks in min-energy groups.
+    """
     int_blocks = []
-    for row in min_g_vals_group.iterrows():
-        row = row[1].astype(int)
-        seq1 = list(range(row.start1, row.end1+1))
-        seq2 = list(range(row.start2, row.end2+1))
-        if len(seq1) != (row.struct_elem +1) and len(seq2) != (row.struct_elem + 1):
-            int_blocks += [seq1, seq2]
+    for _, row in min_g_vals_group.iterrows():
+        row = row.astype(int)
+        seq1, seq2 = list(range(row.start1, row.end1 + 1)), list(range(row.start2, row.end2 + 1))
+        if len(seq1) != (row.struct_elem + 1) and len(seq2) != (row.struct_elem + 1):
+            int_blocks.extend([seq1, seq2])
         else:
-            if len(seq1) == row.struct_elem + 1:
-                int_blocks += [seq1]
-            else:
-                int_blocks += [seq2]
-            # print(int_blocks)
+            int_blocks.append(seq1 if len(seq1) == row.struct_elem + 1 else seq2)
 
-    freq = np.zeros(len(z_planes)+1).astype(int)
-
+    freq = np.zeros(n_planes + 1, dtype=int)
     for block in int_blocks:
         for elem in block:
             freq[elem] += 1
+    return dict(sorted(enumerate(freq), key=lambda x: x[1], reverse=True))
 
-    freq_dict = {}
-    for i in range(len(freq)):
-        freq_dict[i] = freq[i]
-
-    freq_dict = dict(sorted(freq_dict.items(), key=lambda x: x[1], reverse=True))
-    return freq_dict
-
-def max_freq_residues(freq_dict, elec_intr):
-    '''
-    extracts the residues with the highest frequency of interaction from each chain in the binary complex. 
-    '''
-    max_freq_residues_ch1 = []
-    max_freq_residues_ch2 = []
-
-    for elem, _ in freq_dict:
-        block1 = (elec_intr.loc[elec_intr.section == elem]).atom1_resnum
-        block2 = (elec_intr.loc[elec_intr.section == elem]).atom2_resnum
+def max_freq_residues(freq_dict: dict[int, int], elec_intr: pd.DataFrame) -> tuple[list[int], list[int]]:
+    """
+    Extract residues with highest frequency of interaction.
+    """
+    max_res_ch1, max_res_ch2 = [], []
+    for elem, _ in freq_dict.items():
+        block1, block2 = elec_intr.loc[elec_intr.section == elem, "atom1_resnum"], elec_intr.loc[elec_intr.section == elem, "atom2_resnum"]
         if block1.empty or block2.empty:
             continue
-        max_freq_residues_ch1 += list(block1)
-        max_freq_residues_ch2 += list(block2)
+        max_res_ch1.extend(block1)
+        max_res_ch2.extend(block2)
+    return max_res_ch1, max_res_ch2
 
-    return max_freq_residues_ch1, max_freq_residues_ch2
+def count_res_freq(residues: list[int]) -> dict[int, int]:
+    """
+    Count frequency of residues.
+    """
+    freq = defaultdict(int)
+    for res in residues:
+        freq[res] += 1
+    return dict(freq)
 
-def count_res_freq(chain1_max_freq, chain2_max_freq):
-    res_freq1 = {}
-    for res in chain1_max_freq:
-        if res in res_freq1:
-            res_freq1[res] += 1
-        else:
-            res_freq1[res] = 1
+def calculate_partial_deltaG(master_matrix: pd.DataFrame, struct_elem: int, temp: int, R: float) -> pd.DataFrame:
+    """
+    Generate deltaG values for minimum energy group.
+    """
+    group = master_matrix.groupby("struct_elem").get_group(struct_elem).copy()
+    z_total = group.sw_part.sum()
+    group["partial_z"] = group.sw_part / z_total
+    group["g_part"] = -R * temp * np.log(group.partial_z)
+    return group
 
-    res_freq2 = {}
-    for res in chain2_max_freq:
-        if res in res_freq2:
-            res_freq2[res] += 1
-        else:
-            res_freq2[res] = 1
-
-    return res_freq1, res_freq2
-
-def calculate_partial_deltaG(master_matrix, min_energy_struct_elem, temp) -> pd.DataFrame:
-    '''
-    Use this only for generating deltaG values for the minimum energy group 
-    '''
-    struct_group = master_matrix.groupby('struct_elem')
-    min_g_vals_groups = struct_group.get_group(min_energy_struct_elem)
-
-    z_total = min_g_vals_groups.sw_part.sum()
-    min_g_vals_groups = min_g_vals_groups.copy()
-    min_g_vals_groups['partial_z'] = min_g_vals_groups.sw_part / z_total
-    min_g_vals_groups['g_part'] = -R * temp * np.log(min_g_vals_groups.partial_z)
-
-    return min_g_vals_groups
-
-def block_is_folded(block, row):
-    '''
-    Check if the block is folded or not
-    '''
-    if row['start1'] <= block <= row['end1']:
-        return True
-    elif row['type'] == 2 and row['start2'] <= block <= row['end2']:
-        return True
-    else:
-        return False
-    
-def get_block_g_vals(id, min_g_vals_struct_elem, output_dir):
-    master_matrix = pd.read_csv(f'{master_matrices_dir}/{id}_master_matrix.csv')
-    min_FE_macrostate = min_g_vals_struct_elem
-    min_FE_group = master_matrix[master_matrix['struct_elem'] == min_FE_macrostate]
+def get_block_g_vals(id: str, struct_elem: int, master_matrices_dir: str, output_dir: str, R: float) -> pd.DataFrame:
+    """
+    Compute blockwise free energy values for min-energy group.
+    """
+    master_matrix = pd.read_csv(f"{master_matrices_dir}/{id}_master_matrix.csv")
+    group = master_matrix[master_matrix["struct_elem"] == struct_elem]
 
     TEMP = 300
-    R = 8.314/1000
-    
     blockwise_total = defaultdict(float)
-    log_total = 0
-    # print(total)
-    for _, row in min_FE_group.iterrows():
-        log_total += row['sw_part']
-        ranges = [(row['start1'], row['end1'])]
-        if row['type'] == 2:
-            ranges.append((row['start2'], row['end2']))
 
+    for _, row in group.iterrows():
+        ranges = [(row.start1, row.end1)]
+        if row.type == 2:
+            ranges.append((row.start2, row.end2))
         for start, end in ranges:
             for i in range(int(start), int(end) + 1):
-                blockwise_total[i] += row['sw_part']
+                blockwise_total[i] += row.sw_part
 
-    # print(blockwise_total)
-    total = sum(master_matrix['sw_part'])
-
+    total = master_matrix["sw_part"].sum()
     blockwise_g_vals = {
-        i: -R * TEMP * np.log(w / total)
-        for i, w in blockwise_total.items()
+        i: -R * TEMP * np.log(w / total) for i, w in blockwise_total.items()
     }
-    blockwise_g_vals = dict(sorted(blockwise_g_vals.items()))
-    blockwise_g_vals = pd.DataFrame.from_dict(blockwise_g_vals, orient='index', columns=['g_val'])
-    blockwise_g_vals.to_csv(f'{output_dir}/blockwise_g_vals_{id}.csv', index_label='block')
-    return blockwise_g_vals
 
-if __name__ == '__main__':
-    params = load_params('params.json')
+    df = pd.DataFrame.from_dict(dict(sorted(blockwise_g_vals.items())), orient="index", columns=["g_val"])
+    df.to_csv(f"{output_dir}/blockwise_g_vals_{id}.csv", index_label="block")
+    return df
 
-    VDW_INT_ENE = params['VDW_INT_ENE']             
-    DCP = params['DCP']                     
-    T_REF = params['T_REF']                 
-    min_temp = params['MIN_TEMP']
-    max_temp = params['MAX_TEMP']
-    temp_step = params['TEMP_STEP']
-    R = params['R']
-    DIELEC = params['DIELEC_CYTO']          # change this to DIELEC_TM if working with transmembrane proteins. 
-    N_PLANES = params['N_PLANES']
+# -------------------------------------------------------------------
+# Main pipeline
+# -------------------------------------------------------------------
+if __name__ == "__main__":
+    params = load_params("params.json")
 
-    master_matrices_dir = './master_matrices'
-    g_vecs_dir = './g_vecs'
-    elec_intr_dir = './elec_intr_files'
-    vdw_intr_dir = './vdw_intr_files'
-    pdb_files_dir = './pdb_files'
+    # Parameters
+    R = params["R"]
+    N_PLANES = params["N_PLANES"]
+    min_temp, max_temp, temp_step = params["MIN_TEMP"], params["MAX_TEMP"], params["TEMP_STEP"]
 
-    TOP_K_HI_FREQ = 10
+    # Directories
+    master_matrices_dir = "./master_matrices"
+    g_vecs_dir = "./g_vecs"
+    elec_intr_dir = "./elec_intr_files"
+    vdw_intr_dir = "./vdw_intr_files"
+    pdb_files_dir = "./pdb_files"
+    output_dir = "./analysis_output"
 
-    output_dir = './analysis_output'
-    analysis_output_dir = f'{output_dir}/output_data'
-    blockwise_g_vals_dir = f'{output_dir}/blockwise_g_vals'
-    min_g_val_output_dir = f'{output_dir}/min_g_vals_groups'
-    part_deltaG_output_dir = f'{output_dir}/partial_deltaG'
+    dirs = {
+        "analysis": f"{output_dir}/output_data",
+        "blockwise": f"{output_dir}/blockwise_g_vals",
+        "min_g": f"{output_dir}/min_g_vals_groups",
+        "partial": f"{output_dir}/partial_deltaG",
+    }
+    ensure_dirs([output_dir, *dirs.values()])
 
-    os.makedirs(output_dir, exist_ok=True)
-    os.makedirs(analysis_output_dir, exist_ok=True)
-    os.makedirs(blockwise_g_vals_dir, exist_ok=True)
-    os.makedirs(min_g_val_output_dir, exist_ok=True)
-    os.makedirs(part_deltaG_output_dir, exist_ok=True)
-
-
-    id_list = [file.split('_')[0] for file in os.listdir(master_matrices_dir)]
+    id_list = [file.split(".")[0] for file in os.listdir(pdb_files_dir)]
 
     for id in id_list:
-        id_data = {}
+        print(f"Processing {id}...")
+        elec_intr = pd.read_csv(f"{elec_intr_dir}/elec_intr_{id}.csv")
 
-        print(f'Processing {id}...')
-        elec_intr = pd.read_csv(f'{elec_intr_dir}/elec_intr_{id}.csv')
-        vdw_intr = pd.read_csv(f'{vdw_intr_dir}/vdw_intr_{id}.csv')
+        master_matrix = pd.read_csv(f"{master_matrices_dir}/{id}_master_matrix.csv")
+        g_vecs = pd.read_csv(f"{g_vecs_dir}/{id}_g_vecs.csv")
 
-        z_planes = generate_z_planes(elec_intr, params['N_PLANES'])
-        elec_intr = get_intr_sections(elec_intr, z_planes)
-        vdw_intr = get_intr_sections(vdw_intr, z_planes)
+        # Minimum free energy structured elements
+        min_struct_elems = calc_min_g_struct_elem(g_vecs)
+        min_groups = master_matrix[master_matrix["struct_elem"].isin(min_struct_elems)]
+        min_groups.to_csv(f"{dirs['min_g']}/{id}_min_g_vals_groups.csv", index=False)
 
-        master_matrix = pd.read_csv(f'{master_matrices_dir}/{id}_master_matrix.csv')
-        g_vecs = pd.read_csv(f'{g_vecs_dir}/{id}_g_vecs.csv')
+        # Blockwise free energies
+        blockwise_g_vals = get_block_g_vals(id, min_struct_elems[0], master_matrices_dir, dirs["blockwise"], R)
 
-        min_g_struct_elems = calc_min_g_struct_elem(g_vecs)                                     # this is a list
-        min_g_vals_groups = get_min_g_val_groups(master_matrix, min_g_struct_elems[0])          # this is a dataframe 
-        # print(f'Minimum free energy structured elements for {id}: {min_g_struct_elems}')
-        # print('-------------------------------------------')
-        
-        min_gval_gr_df = master_matrix[master_matrix['struct_elem'].isin(min_g_struct_elems)]
+        # Partial ΔG over temperatures
+        part_deltaG = pd.DataFrame()
+        part_deltaG_all = pd.DataFrame()
+        for temp in range(min_temp, max_temp + temp_step, temp_step):
+            deltaG_df = calculate_partial_deltaG(master_matrix, min_struct_elems[0], temp, R)
+            part_deltaG[temp] = deltaG_df.g_part
+            part_deltaG_all = pd.concat([part_deltaG_all, deltaG_df])
+        part_deltaG.to_csv(f"{dirs['partial']}/partial_deltaG_{id}.csv", index=False)
 
-        # get the blockwise free energy values
-        blockwise_g_vals = get_block_g_vals(id, min_g_struct_elems[0], blockwise_g_vals_dir)
+        # Frequencies
+        freq = frequency_dict(part_deltaG_all, N_PLANES)
+        top_freq = list(freq.items())[:10]
+        max_res1, max_res2 = max_freq_residues(dict(top_freq), elec_intr)
+        res_freq1, res_freq2 = count_res_freq(max_res1), count_res_freq(max_res2)
 
-        # fig = plot_row_g_vals(min_gval_gr_df)
-        # fig.savefig(f'{output_dir}/row_g_vals_{id}.jpg')
-
-        id_data['min_g_struct_elems'] = [int(x) for x in min_g_struct_elems]
-        id_data['min_g_vals_groups'] = min_g_struct_elems
-      
-        min_g_vals_groups.to_csv(f'{min_g_val_output_dir}/{id}_min_g_vals_groups.csv', index=False)
-        # print(type(min_g_vals_groups))
-
-        # calculate partial deltaG
-        part_deltaG_data = pd.DataFrame(columns=list(range(min_temp, max_temp+temp_step, temp_step)))
-
-        part_deltaG_data_df = pd.DataFrame()
-        for temp in range(min_temp, max_temp+temp_step, temp_step):
-            min_g_vals_groups = calculate_partial_deltaG(master_matrix, min_g_struct_elems[0], temp)
-            # print(min_g_vals_groups)
-            part_deltaG_data[temp] = min_g_vals_groups.g_part
-            part_deltaG_data_df = pd.concat([part_deltaG_data_df, min_g_vals_groups])
-
-        # print(part_deltaG_data_df)
-        # save the partial deltaG data
-        part_deltaG_data.to_csv(f'{part_deltaG_output_dir}/partial_deltaG_{id}.csv', index=False)
-
-        freq_dict = frequency_dict(part_deltaG_data_df, z_planes)
-        id_data['freq_dict'] = {int(k): int(v) for k, v in freq_dict.items()}
-        id_data['highest_freq'] = [(int(k), int(v)) for k, v in freq_dict.items()][:TOP_K_HI_FREQ]
-
-        max_freq_residues_elec1, max_freq_residues_elec2 = max_freq_residues(id_data['highest_freq'], elec_intr)
-        max_freq_residues_vdw1, max_freq_residues_vdw2 = max_freq_residues(id_data['highest_freq'], elec_intr)
-
-        res_freq_elec1, res_freq_elec2 = count_res_freq(max_freq_residues_elec1, max_freq_residues_elec2)
-        res_freq_vdw1, res_freq_vdw2 = count_res_freq(max_freq_residues_vdw1, max_freq_residues_vdw2)
-
-        id_data['res_freq_elec1'] = dict(res_freq_elec1)
-        id_data['res_freq_elec2'] = dict(res_freq_elec2)
-        id_data['res_freq_vdw1'] = dict(res_freq_vdw1)
-        id_data['res_freq_vdw2'] = dict(res_freq_vdw2)
-
-        # Before writing to JSON
-
-        with open(f'{analysis_output_dir}/analysis_output_{id}.json', 'w') as f:
+        # Save JSON summary
+        id_data = {
+            "min_g_struct_elems": [int(x) for x in min_struct_elems],
+            "freq_dict": {int(k): int(v) for k, v in freq.items()},
+            "highest_freq": [(int(k), int(v)) for k, v in top_freq],
+            "res_freq_elec1": res_freq1,
+            "res_freq_elec2": res_freq2,
+        }
+        with open(f"{dirs['analysis']}/analysis_output_{id}.json", "w") as f:
             json.dump(id_data, f, indent=4)
-        print(f'Analysis for {id} complete.')
-        # print('-------------------------------------------')
 
-    print('Analysis complete.')
+        print(f"Analysis for {id} complete.")
 
-
+    print("All analyses complete.")

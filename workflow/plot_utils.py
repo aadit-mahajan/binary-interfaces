@@ -15,7 +15,10 @@ def plot_g_vecs(g_vecs, temps, id, output_dir):
     plt.title(f'FE curve for PDB ID: {id}')
     plt.xlabel('Number of interacting blocks')
     plt.ylabel('Free energy (kJ/mol)')
-    
+    # plt.ylim(-200, 100)
+    plt.xticks(range(0, len(g_vecs[temp]), 2))
+    plt.grid()
+    plt.tight_layout()
     plt.savefig(f'{output_dir}/FE_curve_{id}.jpg')
     plt.close()
 
@@ -38,26 +41,40 @@ def get_struct_elem_list(master_matrix) -> list:
 def plot_row_g_vals(min_g_vals_groups):
     ssa_entries = min_g_vals_groups[min_g_vals_groups.type == 1].reset_index()
     dsa_entries = min_g_vals_groups[min_g_vals_groups.type == 2].reset_index()
+    tsa_entries = min_g_vals_groups[min_g_vals_groups.type == 3].reset_index()
     total_entries = min_g_vals_groups.reset_index()
 
     fig = plt.figure(figsize=(15, 5))
-    ax1 = plt.subplot(1, 3, 1)
+    ax1 = plt.subplot(2, 2, 1)
     ax1.plot(ssa_entries.g_part)
-    plt.ylabel('free energy (J/mol)')
+    plt.ylabel('free energy (kJ/mol)')
     plt.title('Free energy values for ssa structured elements')
     plt.xlabel('Combination index')
+    plt.xticks(range(0, len(dsa_entries.g_part)))
 
-    ax2 = plt.subplot(1, 3, 2)
+    ax2 = plt.subplot(2, 2, 2)
     ax2.plot(dsa_entries.g_part)
-    plt.ylabel('free energy (J/mol)')
+    plt.ylabel('free energy (kJ/mol)')
     plt.title('Free energy values for dsa structured elements')
     plt.xlabel('Combination index')
+    plt.xticks(range(0, len(dsa_entries.g_part)))
 
-    ax3 = plt.subplot(1, 3, 3)
-    ax3.plot(total_entries.g_part)
-    plt.ylabel('free energy (J/mol)')
-    plt.title("Free energy values for all structured elements")
+    ax3 = plt.subplot(2, 2, 3)
+    ax3.plot(tsa_entries.g_part)
+    plt.ylabel('free energy (kJ/mol)')
+    plt.title("Free energy values for tsa structured elements")
     plt.xlabel('Combination index')
+    plt.xticks(range(0, len(tsa_entries.g_part)))
+
+    ax4 = plt.subplot(2, 2, 4)
+    ax4.plot(total_entries.g_part)
+    plt.ylabel('free energy (kJ/mol)')
+    plt.title('Free energy values for all structured elements')
+    plt.xlabel('Combination index')
+    plt.xticks(range(0, len(dsa_entries.g_part)))
+
+    plt.tight_layout()
+    plt.suptitle('Free energy values for structured elements', fontsize=16)
 
     plt.savefig(f'{plot_output_dir}/row_g_vals.jpg')
     plt.close()
@@ -69,6 +86,7 @@ def plot_blockwise_g_vals(id, output_dir):
     blockwise_g_vals = pd.read_csv(f'{blockwise_g_vals_data_dir}/blockwise_g_vals_{id}.csv')
     plt.plot(blockwise_g_vals['g_val'])
     plt.xlabel('Structured element index')
+    plt.xticks(range(0, len(blockwise_g_vals)))
     plt.ylabel('Free energy (kJ/mol)')
     plt.title(f'Free energy values for PDB ID: {id}')
     plt.grid()
@@ -81,10 +99,10 @@ def plot_part_deltaG_temp(id, output_dir, temp):
         os.makedirs(output_dir)
 
     partial_delta_G = pd.read_csv(f'{part_deltaG_dir}/partial_deltaG_{id}.csv')
-    fig = plt.figure(figsize=(10, 5))
     xdat = range(len(partial_delta_G))
     plt.plot(xdat, partial_delta_G[f'{temp}'])
     plt.xlabel('Combination index')
+    plt.xticks(range(0, len(partial_delta_G), 5))
     plt.ylabel('Free energy (kJ/mol)')
     plt.title(f'Free energy values for PDB ID: {id} at temperature: {temp}')
     plt.grid()
@@ -110,6 +128,9 @@ def plot_heatmap_part_deltaG(id, output_dir):
 if __name__ == '__main__':
     
     plot_output_dir = './plots'
+    pdb_files_dir = './pdb_files'
+
+    id_list = [file.split('.')[0] for file in os.listdir(pdb_files_dir) if file.endswith('.pdb')]
     os.makedirs(plot_output_dir, exist_ok=True)
 
     total_gvecs_output_dir = f'./{plot_output_dir}/total_gvecs'
@@ -136,13 +157,13 @@ if __name__ == '__main__':
         plot_g_vecs(g_vecs, temps, id, total_gvecs_output_dir)
 
     # load blockwise_g_vals
-    for file in os.listdir(blockwise_g_vals_data_dir):
-        id = file.split('.')[0].split('_')[-1]
-        plot_blockwise_g_vals(id, blockwise_g_vals_dir)
+    for file in id_list:
+        id = file.split('.')[0]
+        plot_blockwise_g_vals(file, blockwise_g_vals_dir)
 
     # load partial_deltaG
-    for file in os.listdir(part_deltaG_dir):
-        id = file.split('.')[0].split('_')[-1]
+    for file in id_list:
+        id = file.split('.')[0]
         plot_part_deltaG_temp(id, deltaG_part_output_dir, '300')
         plot_part_deltaG_temp(id, deltaG_part_output_dir, '310')
         plot_heatmap_part_deltaG(id, deltaG_heatmap_output_dir)

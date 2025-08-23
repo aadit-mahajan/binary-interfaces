@@ -1,9 +1,9 @@
 {
     "VDW_INT_ENE":  -0.07775,
     "DCP":          -0.0003112,
-    "T_REF":        385,
+    "T_REF":        310,
     "MIN_TEMP":     300,
-    "MAX_TEMP":     350,
+    "MAX_TEMP":     310,
     "TEMP_STEP":    10,
     "R":            0.008314,
     "IS":           0.043,

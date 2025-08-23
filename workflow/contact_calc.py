@@ -89,7 +89,7 @@ def get_vdw_int(pdb_path):
         pass
     
     vdw_int = []
-    dist_cutoff = 4
+    dist_cutoff = 4.7
 
     heavy_atoms = ['C', 'N', 'O', 'S']
 
@@ -124,52 +124,39 @@ def fetch_pdb(pdb_id, pdb_dir):
     with open(f'{pdb_dir}/{pdb_id}.pdb', 'wb') as f:
         f.write(r.content)
 
-def get_all_pdbs(pdb_list, pdb_dir):
-    # check if all pdbs have been fetched
-    logger.info('Checking if all pdbs have been fetched...')
-    fetched_pdbs = os.listdir()
-    fetched_pdbs = [fetched_pdb.split('.')[0] for fetched_pdb in fetched_pdbs if fetched_pdb.endswith('.pdb')]
-    if len(fetched_pdbs) == len(pdb_list):
-        logger.info('Pdb files already fetched!')
-        return
-    else:
-        logger.info('Fetching pdbs...')
-        with concurrent.futures.ThreadPoolExecutor() as executor:
-            executor.map(fetch_pdb, pdb_list, [pdb_dir]*len(pdb_list))
+# def get_all_pdbs(pdb_list, pdb_dir):
+#     # check if all pdbs have been fetched
+#     logger.info('Checking if all pdbs have been fetched...')
+#     fetched_pdbs = os.listdir()
+#     fetched_pdbs = [fetched_pdb.split('.')[0] for fetched_pdb in fetched_pdbs if fetched_pdb.endswith('.pdb')]
+#     if len(fetched_pdbs) == len(pdb_list):
+#         logger.info('Pdb files already fetched!')
+#         return
+#     else:
+#         logger.info('Fetching pdbs...')
+#         with concurrent.futures.ThreadPoolExecutor() as executor:
+#             executor.map(fetch_pdb, pdb_list, [pdb_dir]*len(pdb_list))
         
-        # check if all pdbs have been fetched
-        fetched_pdbs = os.listdir(pdb_dir)
-        fetched_pdbs = [fetched_pdb.split('.')[0] for fetched_pdb in fetched_pdbs if fetched_pdb.endswith('.pdb')]
-        if len(fetched_pdbs) == len(pdb_list):
-            print('All pdbs fetched!')
-        else:
-            diff = set(pdb_list) - set(fetched_pdbs)
-            for pdb in diff:
-                print(f'Failed to fetch pdb: {pdb}; trying again...')
-                fetch_pdb(pdb, pdb_dir)
-                set(fetched_pdbs).add(pdb)
+#         # check if all pdbs have been fetched
+#         fetched_pdbs = os.listdir(pdb_dir)
+#         fetched_pdbs = [fetched_pdb.split('.')[0] for fetched_pdb in fetched_pdbs if fetched_pdb.endswith('.pdb')]
+#         if len(fetched_pdbs) == len(pdb_list):
+#             print('All pdbs fetched!')
+#         else:
+#             diff = set(pdb_list) - set(fetched_pdbs)
+#             for pdb in diff:
+#                 print(f'Failed to fetch pdb: {pdb}; trying again...')
+#                 fetch_pdb(pdb, pdb_dir)
+#                 set(fetched_pdbs).add(pdb)
             
-            if len(set(fetched_pdbs)) == len(pdb_list):
-                print('All pdbs fetched!')
-            else:
-                print('Failed to fetch all pdbs. Try again later.')
+#             if len(set(fetched_pdbs)) == len(pdb_list):
+#                 print('All pdbs fetched!')
+#             else:
+#                 print('Failed to fetch all pdbs. Try again later.')
 
 if __name__ == '__main__':
 
     pdb_files_dir = './pdb_files'
-    pdb_file_list_path = './pdb_file_list.txt'
-
-    with open(pdb_file_list_path, 'r') as f:
-        pdb_list = np.genfromtxt(f, dtype=str, delimiter=',')
-        pdb_list = pdb_list.tolist()
-        
-        print('length of pdb list:',len(pdb_list))
-
-    os.makedirs(pdb_files_dir, exist_ok=True)
-
-    # get_all_pdbs(pdb_list, pdb_dir=pdb_files_dir)
-
-    # print(os.listdir(pdb_files_dir))
 
     elec_files_dir = './elec_intr_files'
     vdw_files_dir = './vdw_intr_files'
@@ -192,6 +179,7 @@ if __name__ == '__main__':
                                                             'distance'])
                 elec_int_df['intene'] = 332*4.184*elec_int_df['atom1_chg']*elec_int_df['atom2_chg']/(29*elec_int_df['distance'])
 
+                elec_int_df['intr_type'] = 'elec'
                 elec_int_path = os.path.join(elec_files_dir, f'elec_intr_{id}.csv')
                 elec_int_df.to_csv(elec_int_path, index=False)
 
@@ -202,11 +190,11 @@ if __name__ == '__main__':
                 vdw_intr = pd.DataFrame(vdw, columns=['atom1', 'res1', 'chain1', 'atom1_xcoord', 'atom1_ycoord', 'atom1_zcoord', 'atom1_resnum',
                                                     'atom2', 'res2', 'chain2', 'atom2_xcoord', 'atom2_ycoord', 'atom2_zcoord', 'atom2_resnum',
                                                     'distance'])
-                
+                vdw_intr['intr_type'] = 'vdw'
                 vdw_intr_path = os.path.join(vdw_files_dir, f'vdw_intr_{id}.csv')
                 vdw_intr.to_csv(vdw_intr_path, index=False)
                 logger.info('Van der Waals interactions done.')
-                print(f'Done with pdb: {id}')
+                # print(f'Done with pdb: {id}')
         except Exception as e:
             print(f'Error processing pdb: {file}')
             print(e)

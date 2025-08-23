@@ -24,11 +24,25 @@ def preprocess_pdb(pdb_file):
         
         # Filter atoms from these two chains
         selected_atoms = atom_df[atom_df['chain_id'].isin([chain_a, chain_b])]
-        
-        # Optionally, rename them to 'A' and 'B' if needed
         selected_atoms = selected_atoms.copy()
+        
+        # Normalize chain IDs
         selected_atoms.loc[selected_atoms['chain_id'] == chain_a, 'chain_id'] = 'A'
         selected_atoms.loc[selected_atoms['chain_id'] == chain_b, 'chain_id'] = 'B'
+        
+        # Reset residue numbers separately for each chain
+        for chain in ['A', 'B']:
+            mask = selected_atoms['chain_id'] == chain
+            residues = selected_atoms.loc[mask, 'residue_number']
+            
+            # Create mapping from old residue_number → new (1..N)
+            unique_residues = residues.drop_duplicates().to_numpy()
+            mapping = {old: new for new, old in enumerate(unique_residues, start=1)}
+            
+            selected_atoms.loc[mask, 'residue_number'] = residues.map(mapping)
+        
+        # Reset atom serial numbers globally
+        selected_atoms['atom_number'] = range(1, len(selected_atoms) + 1)
         
         # Write back the filtered PDB file
         ppdb_new = PandasPdb()
@@ -39,6 +53,7 @@ def preprocess_pdb(pdb_file):
         print("Less than two chains found. No changes made.")
 
     return None
+
 
 def align_protein(pdb_file, output_file):
     # Load PDB file into Pandas DataFrame

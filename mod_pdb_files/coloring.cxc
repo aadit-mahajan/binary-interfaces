@@ -1,0 +1,9 @@
+hide
+show cartoon
+
+color @@bfactor=150 #C0C0C0
+color @@bfactor=160 #6A5ACD
+
+color byattribute bfactor
+
+set bgcolor white
